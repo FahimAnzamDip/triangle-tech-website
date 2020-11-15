@@ -2,7 +2,7 @@
     <div class="container">
         <div class="menu-header">
             <div class="">
-                <a class="nav-brand" href="digital-agency.html">
+                <a class="nav-brand" href="{{ route('home.page') }}">
                     <img class="my-2" width="130" src="{{ asset('frontend') }}/images/ttl-logo.png" alt="Logo">
                 </a>
             </div>
