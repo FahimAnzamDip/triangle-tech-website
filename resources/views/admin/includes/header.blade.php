@@ -47,6 +47,11 @@
             </li>
 
             <li class="menu-header">Contact</li>
+            <li class="nav-item {{ request()->is('contact-details*') ? 'active' : '' }} border-bottom border-light border-top">
+                <a href="{{ route('contact.details') }}" class="nav-link">
+                    <i class="fas fa-map-marker-alt"></i><span>Contact Details</span>
+                </a>
+            </li>
             <li class="nav-item {{ request()->is('messages*') ? 'active' : '' }} border-bottom border-light border-top">
                 <a href="{{ route('messages.index') }}" class="nav-link">
                     <i class="fas fa-envelope"></i><span>Messages <div class="badge badge-primary">{{ \App\Models\Message::where('read', 0)->count() }}</div></span>

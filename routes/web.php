@@ -23,6 +23,10 @@ Route::group(['namespace' => 'Frontend'], function () {
 });
 
 Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function () {
+    //Dashboard
     Route::get('/dashboard', 'DashboardController@dashboard')->name('admin.dashboard');
+    //Contact Details
+    Route::get('/contact-details', 'ContactController@index')->name('contact.details');
+    Route::post('/contact-details/update/{id}', 'ContactController@update')->name('contact.details.update');
 });
 

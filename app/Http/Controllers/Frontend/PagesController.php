@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -41,9 +42,11 @@ class PagesController extends Controller
 
     public function contact() {
         $title = "Triangle Technologies Ltd - Contact";
+        $contact = Contact::first();
 
         return view('frontend.pages.contact-page', [
-            'title' => $title
+            'title' => $title,
+            'contact' => $contact
         ]);
     }
 

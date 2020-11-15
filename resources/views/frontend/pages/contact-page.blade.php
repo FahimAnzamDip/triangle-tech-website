@@ -79,16 +79,16 @@
                     <div class="contact-details">
                         <div class="funfct srcl1">
                             <h4 class="mb-3" style="color:#6A6A8E;"><i class="fas fa-phone-alt mr-2"></i> Phone</h4>
-                            <p>+8801904654712</p>
-                            <p>+8801810536303</p>
+                            <p>{{ $contact->phone_one }}</p>
+                            <p>{{ $contact->phone_two }}</p>
                         </div>
                         <div class="funfct srcl2">
                             <h4 class="mb-3" style="color:#6A6A8E;"><i class="fas fa-envelope mr-2"></i> Email</h4>
-                            <p>hr@triangeltech.com</p>
+                            <p>{{ $contact->email }}</p>
                         </div>
                         <div class="funfct srcl3">
                             <h4 class="mb-3" style="color:#6A6A8E;"><i class="fas fa-map-marker-alt mr-2"></i> Address</h4>
-                            <p>Plot #02, Road #12, Sector #10, Uttara Dhaka 1230</p>
+                            <p>{{ $contact->address }}</p>
                         </div>
                     </div>
                 </div>

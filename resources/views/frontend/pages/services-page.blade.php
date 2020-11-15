@@ -171,7 +171,7 @@
                         <span>Let's work together</span>
                         <h2 class="mb-4">Let’s make awesome things, together.</h2>
                         <a href="{{ route('contact.page') }}" class="btn-main bg-btn3">Get A Quote<i class="fas fa-chevron-right fa-icon"></i></a>
-                        <p class="cta-call font-weight-bold">OR Call Us Now <a href="tel:+8801904654712" style="letter-spacing: 2px;"><i class="fas fa-phone-alt"></i> +8801904654712</a></p>
+                        <p class="cta-call font-weight-bold">OR Call Us Now <a href="tel:{{ \App\Models\Contact::first()->phone_one }}" style="letter-spacing: 2px;"><i class="fas fa-phone-alt"></i> {{ \App\Models\Contact::first()->phone_one }}</a></p>
                     </div>
                 </div>
             </div>

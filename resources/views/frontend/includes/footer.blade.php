@@ -5,9 +5,9 @@
                 <a class="navbar-brand mb30 mt30" href="#"> <img width="180" src="{{ asset('frontend') }}/images/ttl-logo.png" alt="Logo"/></a>
                 <p>You can know more about us via our social links below. Thank You!</p>
                 <div class="ff-social-icons mt30">
-                    <a href="javascript:void(0)" target="blank"><i class="fab fa-facebook"></i></a>
-                    <a href="javascript:void(0)" target="blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="javascript:void(0)" target="blank"><i class="fab fa-github"></i></a>
+                    <a href="{{ \App\Models\Contact::first()->facebook_link }}" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="{{ \App\Models\Contact::first()->linkedin_link }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="{{ \App\Models\Contact::first()->github_link }}" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
 
@@ -16,17 +16,17 @@
                 <ul class="footer-address-list ftr-details">
                     <li>
                         <span><i class="fas fa-envelope"></i></span>
-                        <p>Email <span> <a href="mailto:hr@triangeltech.com">hr@triangeltech.com</a></span></p>
+                        <p>Email <span> <a href="mailto:{{ \App\Models\Contact::first()->email }}">{{ \App\Models\Contact::first()->email }}</a></span></p>
                     </li>
                     <li>
                         <span><i class="fas fa-phone-alt"></i></span>
                         <p>Phone
-                            <span><a href="tel:+8801904654712">+8801904654712</a></span>
-                            <span><a href="tel:+8801810536303">+8801810536303</a></span>
+                            <span><a href="tel:{{ \App\Models\Contact::first()->phone_one }}">{{ \App\Models\Contact::first()->phone_one }}</a></span>
+                            <span><a href="tel:{{ \App\Models\Contact::first()->phone_two }}">{{ \App\Models\Contact::first()->phone_two }}</a></span>
                         </p>
                     <li>
                         <span><i class="fas fa-map-marker-alt"></i></span>
-                        <p>Address <span> Plot #02, Road #12, Sector #10, Uttara Dhaka 1230</span></p>
+                        <p>Address <span> {{ \App\Models\Contact::first()->address }}</span></p>
                     </li>
                 </ul>
             </div>

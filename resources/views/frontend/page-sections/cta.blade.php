@@ -10,7 +10,7 @@
             </div>
             <div class="col-lg-4 d-flex justify-content-center align-items-center">
                 <div class="email-subs-form">
-                    <a href="tel:+8801904654712" class="btn-main bg-btn lnk"><i class="fas fa-phone-alt mr-3"></i><span class="circle"></span><strong style="letter-spacing: 2px;">+8801904654712</strong></a>
+                    <a href="tel:{{ \App\Models\Contact::first()->phone_one }}" class="btn-main bg-btn lnk"><i class="fas fa-phone-alt mr-3"></i><span class="circle"></span><strong style="letter-spacing: 2px;">{{ \App\Models\Contact::first()->phone_one }}</strong></a>
                 </div>
             </div>
         </div>
