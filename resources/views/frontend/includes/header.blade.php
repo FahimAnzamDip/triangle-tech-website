@@ -14,8 +14,8 @@
                     <li class="{{ request()->is('about') ? 'active' : '' }}">
                         <a href="{{ route('about.page') }}" class="menu-links">About</a>
                     </li>
-                    <li class="{{ request()->is('services') ? 'active' : '' }}">
-                        <a href="{{ route('services.page') }}" class="menu-links">Services</a>
+                    <li class="{{ request()->is('all-services') ? 'active' : '' }}">
+                        <a href="{{ route('all.services.page') }}" class="menu-links">Services</a>
                     </li>
                     <li class="{{ request()->is('prices') ? 'active' : '' }}">
                         <a href="{{ route('prices.page') }}" class="menu-links">Development Prices</a>
@@ -40,8 +40,8 @@
                 <li class="{{ request()->is('about') ? 'active' : '' }}">
                     <a href="{{ route('about.page') }}">About</a>
                 </li>
-                <li class="{{ request()->is('services') ? 'active' : '' }}">
-                    <a href="{{ route('services.page') }}">Services</a>
+                <li class="{{ request()->is('all-services') ? 'active' : '' }}">
+                    <a href="{{ route('all.services.page') }}">Services</a>
                 </li>
                 <li class="{{ request()->is('prices') ? 'active' : '' }}">
                     <a href="{{ route('prices.page') }}">Development Prices</a>

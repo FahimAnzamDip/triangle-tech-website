@@ -4,15 +4,18 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
     public function home() {
         $title = "Triangle Technologies Ltd - Software Company";
+        $services = Service::take(3)->get();
 
         return view('frontend.home-page', [
-            'title' => $title
+            'title' => $title,
+            'services' => $services
         ]);
     }
 
@@ -26,9 +29,11 @@ class PagesController extends Controller
 
     public function services() {
         $title = "Triangle Technologies Ltd - Services";
+        $services = Service::all();
 
         return view('frontend.pages.services-page', [
-            'title' => $title
+            'title' => $title,
+            'services' => $services
         ]);
     }
 

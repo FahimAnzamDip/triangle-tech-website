@@ -46,6 +46,13 @@
                 </a>
             </li>
 
+            <li class="menu-header">Services</li>
+            <li class="nav-item {{ request()->is('services*') ? 'active' : '' }} border-bottom border-light border-top">
+                <a href="{{ route('services.index') }}" class="nav-link">
+                    <i class="fas fa-briefcase"></i><span>Services</span>
+                </a>
+            </li>
+
             <li class="menu-header">Contact</li>
             <li class="nav-item {{ request()->is('contact-details*') ? 'active' : '' }} border-bottom border-light border-top">
                 <a href="{{ route('contact.details') }}" class="nav-link">

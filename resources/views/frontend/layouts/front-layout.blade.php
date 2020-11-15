@@ -28,9 +28,6 @@
 </head>
 
 <body>
-<!--Laravel Notify-->
-<x:notify-messages />
-
 <!--Start Preloader -->
 <div class="onloadpage" id="page_loader">
     <div class="pre-content">
@@ -58,6 +55,9 @@
         </a>
     </div>
 </div>
+
+<!--Laravel Notify-->
+<x:notify-messages />
 
 <!--scroll to top-->
 <a id="scrollUp" href="#top"></a>

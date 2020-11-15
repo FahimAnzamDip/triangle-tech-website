@@ -3,7 +3,7 @@
 @section('page-content')
     @include('frontend.page-sections.hero')
 
-    @include('frontend.page-sections.services')
+    @include('frontend.page-sections.some-services')
 
     @include('frontend.page-sections.portfolio')
 
