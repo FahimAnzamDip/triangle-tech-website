@@ -53,6 +53,37 @@
                 </a>
             </li>
 
+            <li class="menu-header">Team</li>
+            <li class="nav-item {{ request()->is('members*') ? 'active' : '' }} border-bottom border-light border-top">
+                <a href="{{ route('members.index') }}" class="nav-link">
+                    <i class="fas fa-users"></i><span>Members</span>
+                </a>
+            </li>
+
+            <li class="menu-header">Client</li>
+            <li class="nav-item {{ request()->is('clients*') ? 'active' : '' }} border-bottom border-light border-top">
+                <a href="{{ route('clients.index') }}" class="nav-link">
+                    <i class="fas fa-star"></i><span>Clients</span>
+                </a>
+            </li>
+
+            <li class="menu-header">About</li>
+            <li class="nav-item {{ request()->is('regards*') ? 'active' : '' }} border-bottom border-light border-top">
+                <a href="{{ route('regards.index') }}" class="nav-link">
+                    <i class="fas fa-file"></i><span>As Regards Of TTL</span>
+                </a>
+            </li>
+            <li class="nav-item {{ request()->is('facts*') ? 'active' : '' }} border-bottom border-light border-top">
+                <a href="{{ route('facts.index') }}" class="nav-link">
+                    <i class="fas fa-chart-bar"></i><span>Facts</span>
+                </a>
+            </li>
+            <li class="nav-item {{ request()->is('choices*') ? 'active' : '' }} border-bottom border-light border-top">
+                <a href="{{ route('choices.index') }}" class="nav-link">
+                    <i class="fas fa-check"></i><span>Why Choose Us</span>
+                </a>
+            </li>
+
             <li class="menu-header">Contact</li>
             <li class="nav-item {{ request()->is('contact-details*') ? 'active' : '' }} border-bottom border-light border-top">
                 <a href="{{ route('contact.details') }}" class="nav-link">

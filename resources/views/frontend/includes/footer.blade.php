@@ -33,20 +33,20 @@
             <div class="col-lg-2 col-sm-6">
                 <h5 class="mb30 mt30">Important Links</h5>
                 <ul class="footer-address-list link-hover">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="javascript:void(0)">About</a></li>
-                    <li><a href="javascript:void(0)">Services</a></li>
-                    <li><a href="javascript:void(0)">Development Prices</a></li>
-                    <li><a href="javascript:void(0)">Contact</a></li>
+                    <li><a href="{{ route('home.page') }}">Home</a></li>
+                    <li><a href="{{ route('about.page') }}">About</a></li>
+                    <li><a href="{{ route('all.services.page') }}">Services</a></li>
+                    <li><a href="{{ route('prices.page') }}">Development Prices</a></li>
+                    <li><a href="{{ route('contact.page') }}">Contact</a></li>
                 </ul>
             </div>
             <div class="col-lg-2 col-sm-6">
                 <h5 class="mb30 mt30">Useful Links</h5>
                 <ul class="footer-address-list link-hover">
-                    <li><a href="javascript:void(0)">Projects</a></li>
-                    <li><a href="javascript:void(0)">Our Team</a></li>
-                    <li><a href="javascript:void(0)">Customers</a></li>
-                    <li><a href="javascript:void(0)">Facts</a></li>
+                    <li><a href="{{ route('home.page') }}">Projects</a></li>
+                    <li><a href="{{ route('home.page') }}">Our Team</a></li>
+                    <li><a href="{{ route('all.services.page') }}">Customers</a></li>
+                    <li><a href="{{ route('about.page') }}">Facts</a></li>
                 </ul>
             </div>
         </div>

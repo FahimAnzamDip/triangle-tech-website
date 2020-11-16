@@ -31,5 +31,20 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function () {
     //Services
     Route::get('/services/delete/{id}', 'ServicesController@delete')->name('services.delete');
     Route::resource('services', 'ServicesController')->except('show', 'destroy');
+    //Team Members
+    Route::get('/members/delete/{id}', 'MembersController@delete')->name('members.delete');
+    Route::resource('members', 'MembersController')->except('show', 'destroy');
+    //Clients
+    Route::get('/clients/delete/{id}', 'ClientsController@delete')->name('clients.delete');
+    Route::resource('clients', 'ClientsController')->except('show', 'destroy');
+    //Facts
+    Route::get('/facts', 'AboutPageController@facts')->name('facts.index');
+    Route::post('/facts/update/{id}', 'AboutPageController@updateFacts')->name('facts.update');
+    //As Regards Of TTL
+    Route::get('/regards', 'AboutPageController@regards')->name('regards.index');
+    Route::post('/regards/update/{id}', 'AboutPageController@updateRegards')->name('regards.update');
+    //Why Choose Us
+    Route::get('/choices/delete/{id}', 'ChoosesController@delete')->name('choices.delete');
+    Route::resource('choices', 'ChoosesController')->except('show', 'destroy');
 });
 

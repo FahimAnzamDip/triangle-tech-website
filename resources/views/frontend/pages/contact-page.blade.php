@@ -77,16 +77,16 @@
                 </div>
                 <div class="col-lg-3 col-md-5">
                     <div class="contact-details">
-                        <div class="funfct srcl1">
+                        <div class="funfct srcl4">
                             <h4 class="mb-3" style="color:#6A6A8E;"><i class="fas fa-phone-alt mr-2"></i> Phone</h4>
-                            <p>{{ $contact->phone_one }}</p>
-                            <p>{{ $contact->phone_two }}</p>
+                            <p><a href="tel:{{ $contact->phone_one }}">{{ $contact->phone_one }}</a></p>
+                            <p><a href="tel:{{ $contact->phone_two }}">{{ $contact->phone_two }}</a></p>
+                        </div>
+                        <div class="funfct srcl1">
+                            <h4 class="mb-3" style="color:#6A6A8E;"><i class="fas fa-envelope mr-2"></i> Email</h4>
+                            <p><a href="maito:{{ $contact->email }}">{{ $contact->email }}</a></p>
                         </div>
                         <div class="funfct srcl2">
-                            <h4 class="mb-3" style="color:#6A6A8E;"><i class="fas fa-envelope mr-2"></i> Email</h4>
-                            <p>{{ $contact->email }}</p>
-                        </div>
-                        <div class="funfct srcl3">
                             <h4 class="mb-3" style="color:#6A6A8E;"><i class="fas fa-map-marker-alt mr-2"></i> Address</h4>
                             <p>{{ $contact->address }}</p>
                         </div>
@@ -97,7 +97,7 @@
     </section>
     <!--End Enquire Form-->
     <!--Google Map-->
-    <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="400px" id="gmap_canvas" src="https://maps.google.com/maps?q=Triangle%20Technologies&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:400px;width:auto;}.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:auto;}</style></div>
+    <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="400px" id="gmap_canvas" src="https://maps.google.com/maps?q=Triangle%20Technologies&t=&z=18&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:400px;width:auto;}.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:auto;}</style></div>
     <!--Google Map-->
     <!--CTA-->
     @include('frontend.page-sections.cta')

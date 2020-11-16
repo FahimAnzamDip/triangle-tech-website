@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 
 class MessagesController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth')->except('store');
+    }
 
     /**
      * Display a listing of the resource.

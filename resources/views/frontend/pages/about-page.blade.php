@@ -73,6 +73,27 @@
     </section>
     <!--End About-->
 
+    @if($as_regard_of_ttl)
+    <!--Start Regards-->
+    <section class="service-section why-choos-lg pad-tb wow fadeIn" data-wow-delay="0.2s" style="background-color: #f9f9ff">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="common-heading">
+                        <h2 class="mb40">As Regards Of TTL</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {!! $as_regard_of_ttl->regards_content !!}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Regards-->
+    @endif
+
     <!--Start 6-D Process-->
     <section class="client-section pad-tb wow fadeIn" data-wow-delay="0.2s">
         <div class="container">
@@ -184,36 +205,25 @@
             </div>
             <div id="accordion" class="accordion mt30">
                 <div class="row justify-content-center">
+                    @forelse($choices as $choice)
                     <div class="col-md-6">
                         <div class="card-1" style="background-color: #f9f9ff;">
-                            <div class="card-header" id="faq1">
-                                <button class="btn btn-link btn-block text-left card-title" type="button"
-                                        data-toggle="collapse" data-target="#collapse-a" aria-expanded="true"
-                                        aria-controls="collapse-a">
-                                    <h4>Best Quality Designs</h4>
-                                </button>
-                            </div>
-                            <div id="collapse-a" class="card-body collapse" aria-labelledby="faq1"
-                                 data-parent="#accordion">
-                                <p>Software design usually involves problem solving and planning a software solution. This includes both a low-level component and algorithm design and a high-level, architecture design.We always try to give our best to maintain the best quality </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card-1" style="background-color: #f9f9ff;">
-                            <div class="card-header" id="faq2">
+                            <div class="card-header" id="faq{{ $choice->id }}">
                                 <button class="btn btn-link btn-block text-left card-title collapsed" type="button"
-                                        data-toggle="collapse" data-target="#collapse-b" aria-expanded="true"
-                                        aria-controls="collapse-b">
-                                    <h4>24x7 Live Support</h4>
+                                        data-toggle="collapse" data-target="#collapse-{{ $choice->id }}" aria-expanded="true"
+                                        aria-controls="collapse-{{ $choice->id }}">
+                                    <h4>{{ $choice->choose_title }}</h4>
                                 </button>
                             </div>
-                            <div id="collapse-b" class="card-body collapse " aria-labelledby="faq2"
+                            <div id="collapse-{{ $choice->id }}" class="card-body collapse" aria-labelledby="faq{{ $choice->id }}"
                                  data-parent="#accordion">
-                                <p>Triangle Technology Ltd offer reasonable Service Level Agreements (SLA) covering most of the additional maintenance services. With our 24/7/365 days per year support, we are making troubleshooting as easy as possible.</p>
+                                <p>{{ $choice->choose_description }}</p>
                             </div>
                         </div>
                     </div>
+                    @empty
+                        <div class="alert alert-info text-center">No Choices Available</div>
+                    @endforelse
                 </div>
             </div>
         </div>
@@ -228,11 +238,11 @@
                     <div class="statistics">
                         <div data-tilt data-tilt-max="20" data-tilt-speed="1000"
                              class="statistics-img d-flex justify-content-center align-items-center">
-                            <i class="fas fa-laptop-code fa-3x" style="color: #B0BDFF;"></i>
+                            <i class="{{ $fact->fact_icon1 }} fa-3x" style="color: #B0BDFF;"></i>
                         </div>
                         <div class="statnumb">
-                            <span class="counter">50</span>
-                            <p>Projects Completed</p>
+                            <span class="counter">{{ $fact->fact_count1 }}</span>
+                            <p>{{ $fact->fact_name1 }}</p>
                         </div>
                     </div>
                 </div>
@@ -240,11 +250,11 @@
                     <div class="statistics">
                         <div data-tilt data-tilt-max="20" data-tilt-speed="1000"
                              class="statistics-img d-flex justify-content-center align-items-center">
-                            <i class="fas fa-users fa-3x" style="color: #B0BDFF;"></i>
+                            <i class="{{ $fact->fact_icon2 }} fa-3x" style="color: #B0BDFF;"></i>
                         </div>
                         <div class="statnumb counter-number">
-                            <span class="counter">52</span>
-                            <p>Happy Clients</p>
+                            <span class="counter">{{ $fact->fact_count2 }}</span>
+                            <p>{{ $fact->fact_name2 }}</p>
                         </div>
                     </div>
                 </div>
@@ -252,11 +262,11 @@
                     <div class="statistics">
                         <div data-tilt data-tilt-max="20" data-tilt-speed="1000"
                              class="statistics-img d-flex justify-content-center align-items-center">
-                            <i class="fas fa-terminal fa-3x" style="color: #B0BDFF;"></i>
+                            <i class="{{ $fact->fact_icon3 }} fa-3x" style="color: #B0BDFF;"></i>
                         </div>
                         <div class="statnumb">
-                            <span class="counter">156</span><span>k+</span>
-                            <p>Line Of Codes</p>
+                            <span class="counter">{{ $fact->fact_count3 }}</span><span>k+</span>
+                            <p>{{ $fact->fact_name3 }}</p>
                         </div>
                     </div>
                 </div>
@@ -264,11 +274,11 @@
                     <div class="statistics mb0">
                         <div data-tilt data-tilt-max="20" data-tilt-speed="1000"
                              class="statistics-img d-flex justify-content-center align-items-center">
-                            <i class="fas fa-trophy fa-3x" style="color: #B0BDFF;"></i>
+                            <i class="{{ $fact->fact_icon4 }} fa-3x" style="color: #B0BDFF;"></i>
                         </div>
                         <div class="statnumb">
-                            <span class="counter">28</span>
-                            <p>Awards</p>
+                            <span class="counter">{{ $fact->fact_count4 }}</span>
+                            <p>{{ $fact->fact_name4 }}</p>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,50 @@
+@extends('admin.layouts.admin-layout')
+
+@section('main-content')
+    <section class="section">
+        <div class="section-header">
+            <h1>Edit Choice</h1>
+            <div class="section-header-breadcrumb">
+                <div class="breadcrumb-item active"><a href="{{ route('admin.dashboard') }}">Dashboard</a></div>
+                <div class="breadcrumb-item"><a href="{{ route('choices.index') }}">Choices</a></div>
+                <div class="breadcrumb-item">Edit Choice</div>
+            </div>
+        </div>
+
+        <div class="section-body">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    @include('admin.includes.alerts')
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Edit Choice</h4>
+                        </div>
+                        <div class="card-body">
+                            <form action="{{ route('choices.update', $choice->id) }}" method="POST">
+                                @csrf
+                                @method('put')
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Choice Title<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" name="choose_title" required  value="{{ $choice->choose_title }}">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Choice Description<span class="text-danger">*</span></label>
+                                    <textarea style="height: 180px" name="choose_description" class="form-control" required>{{ $choice->choose_description }}</textarea>
+                                </div>
+
+                                <div class="form-group d-flex justify-content-end">
+                                    <button class="btn btn-primary" type="submit">Update Choice</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection

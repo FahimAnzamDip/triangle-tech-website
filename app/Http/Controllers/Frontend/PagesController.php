@@ -3,7 +3,12 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Choose;
+use App\Models\Client;
 use App\Models\Contact;
+use App\Models\Fact;
+use App\Models\Member;
+use App\Models\Regard;
 use App\Models\Service;
 use Illuminate\Http\Request;
 
@@ -12,28 +17,40 @@ class PagesController extends Controller
     public function home() {
         $title = "Triangle Technologies Ltd - Software Company";
         $services = Service::take(3)->get();
+        $members = Member::all();
+        $clients = Client::latest()->get();
 
         return view('frontend.home-page', [
             'title' => $title,
-            'services' => $services
+            'services' => $services,
+            'members' => $members,
+            'clients' => $clients
         ]);
     }
 
     public function about() {
         $title = "Triangle Technologies Ltd - About";
+        $fact = Fact::first();
+        $as_regard_of_ttl = Regard::first();
+        $choices = Choose::all();
 
         return view('frontend.pages.about-page', [
-            'title' => $title
+            'title' => $title,
+            'fact' => $fact,
+            'as_regard_of_ttl' => $as_regard_of_ttl,
+            'choices' => $choices
         ]);
     }
 
     public function services() {
         $title = "Triangle Technologies Ltd - Services";
         $services = Service::all();
+        $clients = Client::latest()->get();
 
         return view('frontend.pages.services-page', [
             'title' => $title,
-            'services' => $services
+            'services' => $services,
+            'clients' => $clients
         ]);
     }
 
