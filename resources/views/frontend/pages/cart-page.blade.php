@@ -38,7 +38,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <!-- Form Start -->
-                    <form action="#">
+                    <form action="{{ route('carts.update') }}" method="POST">
+                        @csrf
                         <!-- Table Content Start -->
                         <div class="table-content table-responsive mb-50">
                             <table>
@@ -52,13 +53,30 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                @forelse($carts as $item)
                                 <tr>
-                                    <td class="product-name"><a href="#">Dynamic Website</a></td>
-                                    <td class="product-price"><span class="amount">15,000 BDT</span></td>
-                                    <td class="product-quantity"><input style="font-weight: bold;text-align: center;" type="number" value="1" name="quantity" min="1"/></td>
-                                    <td class="product-subtotal">15,000 BDT</td>
-                                    <td class="product-remove"> <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                                    <td class="product-name">
+                                        <a href="#">{{ $item->name }}</a>
+                                    </td>
+                                    <td class="product-price">
+                                        <span class="amount">{{ $item->price }} BDT</span>
+                                    </td>
+                                    <td class="product-quantity">
+                                        <input style="font-weight: bold;text-align: center;" type="number" value="{{ $item->qty }}" name="quantity" min="1"/>
+                                    </td>
+                                    <input type="hidden" name="id" value="{{ $item->rowId }}">
+                                    <td class="product-subtotal">
+                                        {{ $item->price * $item->qty }} BDT
+                                    </td>
+                                    <td class="product-remove">
+                                        <a href="{{ route('carts.delete', $item->rowId) }}"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                    </td>
                                 </tr>
+                                @empty
+                                    <tr>
+                                        <td colspan="5" class="text-danger">No Packages In Cart</td>
+                                    </tr>
+                                @endforelse
                                 </tbody>
                             </table>
                         </div>
@@ -68,7 +86,7 @@
                             <div class="col-md-8">
                                 <div class="buttons-cart">
                                     <input type="submit" value="Update Cart" />
-                                    <a href="#">Continue Shopping</a>
+                                    <a href="{{ route('prices.page') }}">Continue Shopping</a>
                                 </div>
                             </div>
                             <!-- Cart Button Start -->
@@ -81,12 +99,12 @@
                                         <tbody>
                                         <tr class="cart-subtotal">
                                             <th>Subtotal</th>
-                                            <td><span class="amount">15,000 BDT</span></td>
+                                            <td><span class="amount">{{ \Gloudemans\Shoppingcart\Facades\Cart::subtotal() }} BDT</span></td>
                                         </tr>
                                         <tr class="order-total">
                                             <th>Total</th>
                                             <td>
-                                                <strong><span class="amount">15,000 BDT</span></strong>
+                                                <strong><span class="amount">{{ \Gloudemans\Shoppingcart\Facades\Cart::total() }} BDT</span></strong>
                                             </td>
                                         </tr>
                                         </tbody>

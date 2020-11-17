@@ -49,9 +49,11 @@
                 <li class="{{ request()->is('contact') ? 'active' : '' }}">
                     <a href="{{ route('contact.page') }}">Contact</a>
                 </li>
+                @if(\Gloudemans\Shoppingcart\Facades\Cart::count() > 0)
                 <li class="{{ request()->is('cart') ? 'active' : '' }}">
-                    <a href="{{ route('cart.page')  }}"><i class="fas fa-shopping-cart mr-2"></i> Cart <span class="badge badge-danger">1</span></a>
+                    <a href="{{ route('cart.page')  }}"><i class="fas fa-shopping-cart mr-2"></i> Cart <span class="badge badge-danger">{{ \Gloudemans\Shoppingcart\Facades\Cart::count() }}</span></a>
                 </li>
+                @endif
             </ul>
         </nav>
     </div>

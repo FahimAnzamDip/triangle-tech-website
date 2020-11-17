@@ -46,15 +46,17 @@
 @include('frontend.includes.footer')
 <!--End Footer-->
 
+@if(\Gloudemans\Shoppingcart\Facades\Cart::count() > 0)
 <!--Cart-->
 <div id="cart" class="d-sm-flex d-none justify-content-center align-items-center">
     <div class="cart-icon">
-        <span class="badge badge-danger">2</span>
+        <span class="badge badge-danger">{{ \Gloudemans\Shoppingcart\Facades\Cart::count() }}</span>
         <a href="{{ route('cart.page') }}">
             <i class="fas fa-shopping-cart"></i>
         </a>
     </div>
 </div>
+@endif
 
 <!--Laravel Notify-->
 <x:notify-messages />

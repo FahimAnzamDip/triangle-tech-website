@@ -13,6 +13,7 @@ use App\Models\Package;
 use App\Models\Project;
 use App\Models\Regard;
 use App\Models\Service;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -83,9 +84,11 @@ class PagesController extends Controller
 
     public function cart() {
         $title = "Triangle Technologies Ltd - Cart";
+        $carts = Cart::content();
 
         return view('frontend.pages.cart-page', [
-            'title' => $title
+            'title' => $title,
+            'carts' => $carts
         ]);
     }
 

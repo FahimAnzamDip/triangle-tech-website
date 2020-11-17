@@ -37,40 +37,42 @@
                 </div>
             </div>
             <!-- Form Start -->
-            <div class="row mb-5">
-                <div class="col-md-12">
-                    <div id="accordion" class="accordion">
-                        <div class="card-1" style="background-color: #f9f9ff;">
-                            <div class="card-header" id="faq1">
-                                <button class="btn btn-link btn-block text-left card-title" type="button"
-                                        data-toggle="collapse" data-target="#collapse-a" aria-expanded="true"
-                                        aria-controls="collapse-a">
-                                    Have Coupon? Click Here To Enter.
-                                </button>
-                            </div>
-                            <div id="collapse-a" class="card-body collapse mt-3" aria-labelledby="faq1"
-                                 data-parent="#accordion">
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        <form action="">
-                                            <div class="form-group">
-                                                <label for=""><strong>Coupon</strong> <span class="text-danger">*</span> </label>
-                                                <input type="text" class="form-control" name="coupon" required value="">
-                                            </div>
-                                            <div class="form-group">
-                                                <button type="submit" class="btn-main bg-btn3 lnk">Apply Coupon</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+{{--            <div class="row mb-5">--}}
+{{--                <div class="col-md-12">--}}
+{{--                    <div id="accordion" class="accordion">--}}
+{{--                        <div class="card-1" style="background-color: #f9f9ff;">--}}
+{{--                            <div class="card-header" id="faq1">--}}
+{{--                                <button class="btn btn-link btn-block text-left card-title" type="button"--}}
+{{--                                        data-toggle="collapse" data-target="#collapse-a" aria-expanded="true"--}}
+{{--                                        aria-controls="collapse-a">--}}
+{{--                                    Have Coupon? Click Here To Enter.--}}
+{{--                                </button>--}}
+{{--                            </div>--}}
+{{--                            <div id="collapse-a" class="card-body collapse mt-3" aria-labelledby="faq1"--}}
+{{--                                 data-parent="#accordion">--}}
+{{--                                <div class="row">--}}
+{{--                                    <div class="col-md-5">--}}
+{{--                                        <form action="">--}}
+{{--                                            <div class="form-group">--}}
+{{--                                                <label for=""><strong>Coupon</strong> <span class="text-danger">*</span> </label>--}}
+{{--                                                <input type="text" class="form-control" name="coupon" required value="" placeholder="Enter coupon code">--}}
+{{--                                            </div>--}}
+{{--                                            <div class="form-group">--}}
+{{--                                                <button type="submit" class="btn-main bg-btn3 lnk">Apply Coupon</button>--}}
+{{--                                            </div>--}}
+{{--                                        </form>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <form action="">
                 <div class="row">
                     <div class="col-lg-7">
+                        <h4 class="mb-4">Billing Address</h4>
+                        <hr class="mb-4">
                         <div class="">
                             <div class="">
                                 <div class="row">
@@ -78,14 +80,14 @@
                                         <div class="form-group">
                                             <label for=""><strong> First Name<span
                                                         class="text-danger">*</span></strong></label>
-                                            <input type="text" class="form-control" name="first_name" required>
+                                            <input type="text" class="form-control" name="first_name" required placeholder="Enter your first name" value="{{ old('first_name') }}">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for=""><strong> Last Name<span
                                                         class="text-danger">*</span></strong></label>
-                                            <input type="text" class="form-control" name="last_name" required>
+                                            <input type="text" class="form-control" name="last_name" required placeholder="Enter your last name" value="{{ old('last_name') }}">
                                         </div>
                                     </div>
                                 </div>
@@ -93,105 +95,114 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for=""><strong> Email<span class="text-danger">*</span></strong></label>
-                                            <input type="email" class="form-control" name="email" required>
+                                            <input type="email" class="form-control" name="email" required placeholder="Enter your email" value="{{ old('email') }}">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for=""><strong> Phone<span class="text-danger">*</span></strong></label>
-                                            <input type="text" class="form-control" name="phone" required>
+                                            <input type="text" class="form-control" name="phone" required placeholder="Enter your phone number" value="{{ old('phone') }}">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for=""><strong> Company Name<span
                                                 class="text-danger"></span></strong></label>
-                                    <input type="text" class="form-control" name="company_name">
+                                    <input type="text" class="form-control" name="company_name" placeholder="Enter your company name" value="{{ old('company_name') }}">
                                 </div>
                                 <div class="form-group">
                                     <label for=""><strong> Street Address<span
                                                 class="text-danger">*</span></strong></label>
-                                    <input type="text" class="form-control" name="address" required>
+                                    <input type="text" class="form-control" name="address" required placeholder="Enter your street address" value="{{ old('address') }}">
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for=""><strong> Town / City<span
                                                         class="text-danger">*</span></strong></label>
-                                            <input type="text" class="form-control" name="city" required>
+                                            <input type="text" class="form-control" name="city" required placeholder="Enter your city" value="{{ old('city') }}">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for=""><strong> Postcode / ZIP<span
                                                         class="text-danger">*</span></strong></label>
-                                            <input type="text" class="form-control" name="zip_code" required>
+                                            <input type="text" class="form-control" name="zip_code" required placeholder="Enter your zip / postcode" value="{{ old('zip_code') }}">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for=""><strong> Country<span class="text-danger">*</span></strong></label>
-                                    <input type="text" class="form-control" name="country" required>
+                                    <input type="text" class="form-control" name="country" required placeholder="Enter your country" value="{{ old('country') }}">
                                 </div>
                                 <div class="form-group">
                                     <label for=""><strong> Additional Note (If Needed)<span class="text-danger"></span></strong></label>
-                                    <textarea class="form-control" name="order_note" id="" rows="5"></textarea>
+                                    <textarea class="form-control" name="order_note" id="" rows="5" placeholder="Enter additonal note">{{ old('order_note') }}</textarea>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-5">
+                        <h4 class="mb-4">Your Order</h4>
+                        <hr class="mb-4">
                         <div class="card-1" style="background-color: #f9f9ff;">
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-borderless text-center">
-                                        <tr>
-                                            <th>Package</th>
+                                        <tr style="border-bottom: 1px solid #dddddd !important;">
+                                            <th style="padding-bottom: 25px;">Package</th>
                                             <th>Sub Total</th>
                                         </tr>
-                                        <tr>
-                                            <td>Dynamic Website × <strong>1</strong></td>
-                                            <td>15,000 BDT</td>
+                                        @foreach(\Gloudemans\Shoppingcart\Facades\Cart::content() as $item)
+                                        <tr style="border-bottom: 1px solid #dddddd !important;">
+                                            <td>{{ $item->name }} × <strong>{{ $item->qty }}</strong></td>
+                                            <td>{{ $item->price * $item->qty }} BDT</td>
                                         </tr>
-                                        <tr>
-                                            <td>Newspaper Website × <strong>1</strong></td>
-                                            <td>15,000 BDT</td>
-                                        </tr>
+                                        @endforeach
 
-                                        <tr>
-                                            <th>Sub Total:</th>
-                                            <td>30,000 BDT</td>
+                                        <tr class="text-danger font-weight-bold">
+                                            <th style="padding-top: 25px;">Sub Total:</th>
+                                            <td style="padding-top: 25px;">{{ \Gloudemans\Shoppingcart\Facades\Cart::subtotal() }} BDT</td>
                                         </tr>
-                                        <tr>
+                                        <tr class="text-danger font-weight-bold">
                                             <th>Total:</th>
-                                            <td>30,000 BDT</td>
+                                            <td>{{ \Gloudemans\Shoppingcart\Facades\Cart::total() }} BDT</td>
                                         </tr>
                                     </table>
                                 </div>
                                 <hr class="my-0">
                                 <div class="mt-4">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="payment_method" id="Radios1"
+                                        <input class="form-check-input" type="radio" name="payment_method" id="bankTransfer"
                                                value="Bank Transfer" checked style="cursor: pointer;">
-                                        <label class="form-check-label" for="Radios1" style="cursor: pointer;">
+                                        <label class="form-check-label" for="bankTransfer" style="cursor: pointer;">
                                             <strong>Direct Bank Transfer</strong>
                                         </label>
                                     </div>
-                                    <div class="form-check mt-3">
-                                        <input class="form-check-input" type="radio" name="payment_method" id="Radios2"
+                                    <div class="card my-4" id="bankTransferForm" style="display: block;">
+                                        <div class="card-body">
+                                            <p style="font-size: 0.88rem;line-height: 24px">We will contact you as soon as possible and discuss further about the order and payment process.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-check mt-4">
+                                        <input class="form-check-input" type="radio" name="payment_method" id="bkash"
                                                value="Bkash" style="cursor: pointer;">
-                                        <label class="form-check-label" for="Radios2" style="cursor: pointer;">
+                                        <label class="form-check-label" for="bkash" style="cursor: pointer;">
                                             <strong>Bkash</strong>
                                         </label>
                                     </div>
-                                    <div class="form-check mt-3">
-                                        <input class="form-check-input" type="radio" name="payment_method" id="Radios3"
+                                    @include('frontend.partials.bkash-form')
+
+                                    <div class="form-check mt-4">
+                                        <input class="form-check-input" type="radio" name="payment_method" id="rocket"
                                                value="Rocket" style="cursor: pointer;">
-                                        <label class="form-check-label" for="Radios3" style="cursor: pointer;">
+                                        <label class="form-check-label" for="rocket" style="cursor: pointer;">
                                             <strong>Rocket</strong>
                                         </label>
                                     </div>
+                                    @include('frontend.partials.rocket-form')
                                 </div>
 
                                 <div class="mt-4 d-flex justify-content-center">
@@ -206,4 +217,24 @@
         </div>
     </section>
     <!--End Checkout-->
+@endsection
+
+@section('page-scripts')
+    <script>
+        $('#bankTransfer').click(function () {
+            document.getElementById('bankTransferForm').style.display = 'block';
+            document.getElementById('bkashForm').style.display = 'none';
+            document.getElementById('rocketForm').style.display = 'none';
+        });
+        $('#bkash').click(function () {
+            document.getElementById('bkashForm').style.display = 'block';
+            document.getElementById('rocketForm').style.display = 'none';
+            document.getElementById('bankTransferForm').style.display = 'none';
+        });
+        $('#rocket').click(function () {
+            document.getElementById('rocketForm').style.display = 'block';
+            document.getElementById('bkashForm').style.display = 'none';
+            document.getElementById('bankTransferForm').style.display = 'none';
+        });
+    </script>
 @endsection

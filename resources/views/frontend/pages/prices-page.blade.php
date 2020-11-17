@@ -58,7 +58,15 @@
                                 </ul>
                             </div>
                         </div>
-                        <a href="#" class="btn-main bg-btn3 lnk">Order Now <i class="fas fa-chevron-right fa-icon"></i> <span class="circle"></span></a>
+
+                        <form action="{{ route('carts.store') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="id" value="{{ $package->id }}">
+                            <input type="hidden" name="package_title" value="{{ $package->package_title }}">
+                            <input type="hidden" name="package_price" value="{{ $package->package_price }}">
+
+                            <button type="submit" class="btn-main bg-btn3 lnk">Order Now <i class="fas fa-chevron-right fa-icon"></i> <span class="circle"></span></button>
+                        </form>
                     </div>
                 </div>
                 @endforeach

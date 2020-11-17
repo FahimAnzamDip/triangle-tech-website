@@ -20,6 +20,10 @@ Route::group(['namespace' => 'Frontend'], function () {
     //Contact Messages
     Route::get('/messages/delete/{id}', 'MessagesController@delete')->name('messages.delete');
     Route::resource('messages', 'MessagesController')->except('edit', 'update', 'destroy', 'create');
+    //Carts
+    Route::post('/carts/store', 'CartsController@store')->name('carts.store');
+    Route::post('/carts/update', 'CartsController@update')->name('carts.update');
+    Route::get('/carts/delete/{id}', 'CartsController@delete')->name('carts.delete');
 });
 
 Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function () {
