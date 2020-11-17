@@ -37,80 +37,31 @@
                 </div>
             </div>
             <div class="row justify-content-center">
+                @foreach($packages as $package)
                 <div class="col-lg-4 col-md-6">
                     <div class="pricing-table best-plan mt60 bg-gradient9">
                         <div class="inner-table">
-                            <span class="title">Dynamic Website</span>
-                            <p class="title-sub">Starter Business</p>
-                            <h2><sup>BDT</sup> 15,000</h2>
-                            <p class="duration">Yearly</p>
+                            <span class="title">{{ $package->package_title }}</span>
+                            <p class="title-sub">{{ $package->package_sub_title }}</p>
+                            <h2><sup>BDT</sup> {{ $package->package_price }}</h2>
                             <div class="details">
                                 <ul>
-                                    <li><strong>Free Domain:</strong> .com, .net</li>
-                                    <li><strong>Hosting:</strong> 500 MB</li>
-                                    <li><strong>Email:</strong> 10 Email Address</li>
-                                    <li><strong>Design:</strong> 1 Sample Design</li>
-                                    <li><strong>Pages:</strong> 4 Pages</li>
-                                    <li><strong>Slider:</strong> One Slider</li>
-                                    <li><strong>SEO:</strong>  On-Page SEO</li>
-                                    <li><strong>Development Time:</strong> 10 Days</li>
-                                    <li><strong>Renewal Fees(Yearly):</strong> 3000Tk</li>
+                                    <li><strong>Free Domain:</strong> {{ $package->package_domains }}</li>
+                                    <li><strong>Hosting:</strong> {{ $package->package_hosting }}</li>
+                                    <li><strong>Email:</strong> {{ $package->package_emails }}</li>
+                                    <li><strong>Design:</strong> {{ $package->package_design }}</li>
+                                    <li><strong>Pages:</strong> {{ $package->package_pages }}</li>
+                                    <li><strong>Slider:</strong> {{ $package->package_slider }}</li>
+                                    <li><strong>SEO:</strong>  {{ $package->package_seo }}</li>
+                                    <li><strong>Development Time:</strong> {{ $package->package_time }}</li>
+                                    <li><strong>Renewal Fees(Yearly):</strong> {{ $package->package_fees }}</li>
                                 </ul>
                             </div>
                         </div>
                         <a href="#" class="btn-main bg-btn3 lnk">Order Now <i class="fas fa-chevron-right fa-icon"></i> <span class="circle"></span></a>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="pricing-table best-plan mt60 bg-gradient9">
-                        <div class="inner-table">
-                            <span class="title">Dynamic Website</span>
-                            <p class="title-sub">Starter Business</p>
-                            <h2><sup>BDT</sup> 20,000</h2>
-                            <p class="duration">Yearly</p>
-                            <div class="details">
-                                <ul>
-                                    <li><strong>Free Domain:</strong> .com, .net</li>
-                                    <li><strong>Hosting:</strong> 500 MB</li>
-                                    <li><strong>Email:</strong> 10 Email Address</li>
-                                    <li><strong>Design:</strong> 1 Sample Design</li>
-                                    <li><strong>Pages:</strong> 4 Pages</li>
-                                    <li><strong>Slider:</strong> One Slider</li>
-                                    <li><strong>SEO:</strong>  On-Page SEO</li>
-                                    <li><strong>Development Time:</strong> 10 Days</li>
-                                    <li><strong>Renewal Fees(Yearly):</strong> 3000Tk</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <a href="#" class="btn-main bg-btn3 lnk">Order Now <i class="fas fa-chevron-right fa-icon"></i> <span class="circle"></span></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="pricing-table best-plan mt60 bg-gradient9">
-                        <div class="inner-table">
-                            <span class="title">Dynamic Website</span>
-                            <p class="title-sub">Starter Business</p>
-                            <h2><sup>BDT</sup> 25,000</h2>
-                            <p class="duration">Yearly</p>
-                            <div class="details">
-                                <ul>
-                                    <li><strong>Free Domain:</strong> .com, .net</li>
-                                    <li><strong>Hosting:</strong> 500 MB</li>
-                                    <li><strong>Email:</strong> 10 Email Address</li>
-                                    <li><strong>Design:</strong> 1 Sample Design</li>
-                                    <li><strong>Pages:</strong> 4 Pages</li>
-                                    <li><strong>Slider:</strong> One Slider</li>
-                                    <li><strong>SEO:</strong>  On-Page SEO</li>
-                                    <li><strong>Development Time:</strong> 10 Days</li>
-                                    <li><strong>Renewal Fees(Yearly):</strong> 3000Tk</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <a href="#" class="btn-main bg-btn3 lnk">Order Now <i class="fas fa-chevron-right fa-icon"></i> <span class="circle"></span></a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

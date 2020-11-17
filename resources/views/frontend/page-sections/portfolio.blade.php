@@ -12,48 +12,28 @@
                 <div class="filters">
                     <ul class="filter-menu">
                         <li data-filter="*" class="is-checked">All</li>
-                        <li data-filter=".website">Website</li>
-                        <li data-filter=".app">Mobile App</li>
-                        <li data-filter=".graphic">Graphic</li>
+                        @foreach($categories as $category)
+                        <li data-filter=".{{ strtolower(str_replace(' ', '_', $category->category_name) ) }}">{{ $category->category_name }}</li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
         </div>
         <div class="row card-list">
             <div class="col-lg-4 col-md-6 grid-sizer"></div>
-            <div class="col-lg-4 col-md-6 col-sm-6 mt40 single-card-item website">
+            @foreach($projects as $project)
+            <div class="col-lg-4 col-md-6 col-sm-6 mt40 single-card-item {{ strtolower(str_replace(' ', '_', $project->category->category_name) ) }}">
                 <div class="isotope_item up-hor">
                     <div class="item-image">
-                        <a href="#"><img src="{{ asset('frontend') }}/images/portfolio/app-img1.jpg" alt="image" class="img-fluid" /> </a>
+                        <a href="{{ $project->project_link }}"><img src="{{ asset('storage/project_images') . '/' . $project->project_image }}" alt="image" class="img-fluid" /></a>
                     </div>
                     <div class="item-info-div shdo">
-                        <h4><a href="#">Pets Care & Training App</a></h4>
-                        <p>iOs, Android</p>
+                        <h4><a href="{{ $project->project_link }}">{{ $project->project_name }}</a></h4>
+                        <p>{{ $project->project_description }}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 mt40 single-card-item website">
-                <div class="isotope_item up-hor">
-                    <div class="item-image">
-                        <a href="#"><img src="{{ asset('frontend') }}/images/portfolio/app-img2.jpg" alt="image" class="img-fluid" /> </a>
-                    </div>
-                    <div class="item-info-div shdo">
-                        <h4><a href="#">Car Rental App</a></h4>
-                        <p>Graphic, Print</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 mt40 single-card-item app graphic">
-                <div class="isotope_item up-hor">
-                    <div class="item-image">
-                        <a href="#"><img src="{{ asset('frontend') }}/images/portfolio/app-img3.jpg" alt="image" class="img-fluid" /> </a>
-                    </div>
-                    <div class="item-info-div shdo">
-                        <h4><a href="#">Event Management App</a></h4>
-                        <p>Graphic, Print</p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

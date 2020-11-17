@@ -46,5 +46,14 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function () {
     //Why Choose Us
     Route::get('/choices/delete/{id}', 'ChoosesController@delete')->name('choices.delete');
     Route::resource('choices', 'ChoosesController')->except('show', 'destroy');
+    //Project Categories
+    Route::get('/categories/delete/{id}', 'CategoriesController@delete')->name('categories.delete');
+    Route::resource('categories', 'CategoriesController')->except('show', 'destroy', 'create');
+    //Projects
+    Route::get('/projects/delete/{id}', 'ProjectsController@delete')->name('projects.delete');
+    Route::resource('projects', 'ProjectsController')->except('show', 'destroy');
+    //Packages
+    Route::get('/packages/delete/{id}', 'PackagesController@delete')->name('packages.delete');
+    Route::resource('packages', 'PackagesController')->except('show', 'destroy');
 });
 

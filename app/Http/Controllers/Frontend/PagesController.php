@@ -3,11 +3,14 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Choose;
 use App\Models\Client;
 use App\Models\Contact;
 use App\Models\Fact;
 use App\Models\Member;
+use App\Models\Package;
+use App\Models\Project;
 use App\Models\Regard;
 use App\Models\Service;
 use Illuminate\Http\Request;
@@ -19,12 +22,16 @@ class PagesController extends Controller
         $services = Service::take(3)->get();
         $members = Member::all();
         $clients = Client::latest()->get();
+        $categories = Category::all();
+        $projects = Project::all();
 
         return view('frontend.home-page', [
             'title' => $title,
             'services' => $services,
             'members' => $members,
-            'clients' => $clients
+            'clients' => $clients,
+            'categories' => $categories,
+            'projects' => $projects
         ]);
     }
 
@@ -56,9 +63,11 @@ class PagesController extends Controller
 
     public function prices() {
         $title = "Web Development Prices In Bangladesh - Triangle Technologies Ltd";
+        $packages = Package::all();
 
         return view('frontend.pages.prices-page', [
-            'title' => $title
+            'title' => $title,
+            'packages' => $packages
         ]);
     }
 

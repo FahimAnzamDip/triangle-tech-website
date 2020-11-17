@@ -39,125 +39,18 @@
                 </div>
             </div>
             <div class="row upset link-hover shape-num justify-content-center">
+                @forelse($services as $service)
                 <div class="col-lg-4 col-md-6 col-sm-6 mt30 shape-loc">
                     <div class="s-block h-100 up-hor bd-hor-base">
-                        <div class="s-card-icon"><img src="{{ asset('frontend') }}/images/icons/android-ios.svg" alt="service" class="img-fluid" />
+                        <div class="s-card-icon"><img src="{{ asset('storage/service_images') . '/' . $service->service_image }}" alt="service icon" class="img-fluid" />
                         </div>
-                        <h4>Android / IOS</h4>
-                        <p>Our App development, as well as the growth of our app, will depend on the platform you
-                            choose. We build dynamic and well structured software which is user friendly and responsive.
-                            Try US, Our expert team are looking forward to you.</p>
+                        <h4>{{ $service->service_name }}</h4>
+                        <p>{{ $service->service_description }}</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mt30 shape-loc">
-                    <div class="s-block h-100 up-hor bd-hor-base">
-                        <div class="s-card-icon"><img src="{{ asset('frontend') }}/images/icons/web-development.svg" alt="service" class="img-fluid" /></div>
-                        <h4>Website Development</h4>
-                        <p>Your website identifies you as a business or organization. It is not just a domain and some
-                            pages with a graphic and some text, We listen to you, analyze and understand your business.
-                            We always focus on customer need and satisfactions.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mt30 shape-loc">
-                    <div class="s-block h-100 up-hor bd-hor-base">
-                        <div class="s-card-icon"><img src="{{ asset('frontend') }}/images/icons/hrm-erp.svg" alt="service" class="img-fluid" />
-                        </div>
-                        <h4>HRM / ERP Software</h4>
-                        <p>If you ever need to manage your employee in digital way, you are in right place. It merges
-                            human resources as a discipline and, in particular, its basic HR activities and processes
-                            with the information technology field.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6 mt30 shape-loc">
-                    <div class="s-block h-100 up-hor bd-hor-base">
-                        <div class="s-card-icon"><img src="{{ asset('frontend') }}/images/icons/branding.svg" alt="service" class="img-fluid" />
-                        </div>
-                        <h4>Marketing/ Digital Promotion (SEO)</h4>
-                        <p>Marketing is the business process of creating relationships with and satisfying customers. So
-                            if you want to promote/SEO your business our expert team is ready to discuss with you.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mt30 shape-loc">
-                    <div class="s-block h-100 up-hor bd-hor-base">
-                        <div class="s-card-icon"><img src="{{ asset('frontend') }}/images/icons/consulting.svg" alt="service" class="img-fluid" /></div>
-                        <h4>IT Consultation</h4>
-                        <p>TTL has experienced professionals who advise on, plan, design, install startup company and
-                            various ideas for developing your business. We have strong interpersonal and communication
-                            skills to deal effectively with clients.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mt30 shape-loc">
-                    <div class="s-block h-100 up-hor bd-hor-base">
-                        <div class="s-card-icon"><img src="{{ asset('frontend') }}/images/icons/graphics-design.svg" alt="service" class="img-fluid" />
-                        </div>
-                        <h4>Graphics Design</h4>
-                        <p>We have included in Graphics Dept.: Logo Design, Stationary Design, Corporate Brochure
-                            Design, Business Leaflets and cards, Custom Invitation Card, Trade show and exhibition
-                            Designs, Newsletter design and T-shirt design.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6 mt30 shape-loc">
-                    <div class="s-block h-100 up-hor bd-hor-base">
-                        <div class="s-card-icon"><img src="{{ asset('frontend') }}/images/icons/hosting.svg" alt="service" class="img-fluid" />
-                        </div>
-                        <h4>Domain Hosting</h4>
-                        <p>Web hosting is the place where all the files of your website live. TTL provides unlimited
-                            storage, emails, SSL certificates, and many more exciting services with reasonable prices.
-                            Feel free to contact with us regarding this issue.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mt30 shape-loc">
-                    <div class="s-block h-100 up-hor bd-hor-base">
-                        <div class="s-card-icon"><img src="{{ asset('frontend') }}/images/icons/mobile-communication.svg" alt="service"
-                                                      class="img-fluid" /></div>
-                        <h4>Mobile Communication</h4>
-                        <p>Mobile communication is talking, texting or sending data or image files over a wireless
-                            network.We have now included fixed-network services (data retail, Internet retail, voice
-                            retail and wholesale) and mobile services.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mt30 shape-loc">
-                    <div class="s-block h-100 up-hor bd-hor-base">
-                        <div class="s-card-icon"><img src="{{ asset('frontend') }}/images/icons/networking.svg" alt="service" class="img-fluid" />
-                        </div>
-                        <h4>Computer Networking</h4>
-                        <p>The most common resource shared today is connection to the Internet. Our purpose of
-                            networking is the exchange of information, advice to assist in attaining your goal of
-                            changing careers.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6 mt30 shape-loc">
-                    <div class="s-block h-100 up-hor bd-hor-base">
-                        <div class="s-card-icon"><img src="{{ asset('frontend') }}/images/icons/robotics.svg" alt="service" class="img-fluid" />
-                        </div>
-                        <h4>Robotics ( Arduino )</h4>
-                        <p>Arduino is an open-source electronics platform based on easy-to-use hardware and software.
-                            Arduino boards are able to read inputs and turn it into an output - activating a motor,
-                            turning on an LED, publishing something online.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mt30 shape-loc">
-                    <div class="s-block h-100 up-hor bd-hor-base">
-                        <div class="s-card-icon"><img src="{{ asset('frontend') }}/images/icons/ecommerce.svg" alt="service" class="img-fluid" /></div>
-                        <h4>E-Commerce</h4>
-                        <p>We provide online marketing over the internet network.You can buy your desired products
-                            through our TTL platform. Currently we are offering T shirts, shirts and womens wear as well
-                            as baby attire.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mt30 shape-loc">
-                    <div class="s-block h-100 up-hor bd-hor-base">
-                        <div class="s-card-icon"><img src="{{ asset('frontend') }}/images/icons/car-repair.svg" alt="service" class="img-fluid" />
-                        </div>
-                        <h4>Car Servicing</h4>
-                        <p>You will be surprised by knowing that we have car servicing workshop so that anyone can
-                            contact with us over online! our agents will contact with you in a real soon after your
-                            acknowledgement. Save your time.</p>
-                    </div>
-                </div>
+                @empty
+                    <div class="alert alert-info text-center">No Services Available</div>
+                @endforelse
             </div>
         </div>
     </section>

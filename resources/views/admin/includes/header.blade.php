@@ -46,10 +46,29 @@
                 </a>
             </li>
 
+            <li class="menu-header">Development Prices</li>
+            <li class="nav-item {{ request()->is('packages*') ? 'active' : '' }} border-bottom border-light border-top">
+                <a href="{{ route('packages.index') }}" class="nav-link">
+                    <i class="fas fa-box-open"></i><span>Packages</span>
+                </a>
+            </li>
+
             <li class="menu-header">Services</li>
             <li class="nav-item {{ request()->is('services*') ? 'active' : '' }} border-bottom border-light border-top">
                 <a href="{{ route('services.index') }}" class="nav-link">
                     <i class="fas fa-briefcase"></i><span>Services</span>
+                </a>
+            </li>
+
+            <li class="menu-header">Portfolio</li>
+            <li class="nav-item {{ request()->is('categories*') ? 'active' : '' }} border-bottom border-light border-top">
+                <a href="{{ route('categories.index') }}" class="nav-link">
+                    <i class="fas fa-layer-group"></i><span>Categories</span>
+                </a>
+            </li>
+            <li class="nav-item {{ request()->is('projects*') ? 'active' : '' }} border-bottom border-light border-top">
+                <a href="{{ route('projects.index') }}" class="nav-link">
+                    <i class="fas fa-code"></i><span>Projects</span>
                 </a>
             </li>
 
