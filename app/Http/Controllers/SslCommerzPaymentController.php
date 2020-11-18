@@ -241,7 +241,7 @@ class SslCommerzPaymentController extends Controller
                     ->update(['status' => 'Failed']);
 
                 notify()->error('Transaction Validation Failed.', 'Validation Error!');
-                return redirect()->route('checkout.page');
+                return redirect()->route('prices.page');
             }
         } else if ($order_detials->status == 'Processing' || $order_detials->status == 'Complete') {
             /*
@@ -252,7 +252,7 @@ class SslCommerzPaymentController extends Controller
         } else {
             #That means something wrong happened. You can redirect customer to your product page.
             notify()->error('Invalid Data.', 'Error!');
-            return redirect()->route('checkout.page');
+            return redirect()->route('prices.page');
         }
 
 
@@ -272,13 +272,13 @@ class SslCommerzPaymentController extends Controller
                 ->update(['status' => 'Failed']);
 
             notify()->error('Transaction Failed.', 'Failed!');
-            return redirect()->route('checkout.page');
+            return redirect()->route('prices.page');
         } else if ($order_detials->status == 'Processing' || $order_detials->status == 'Complete') {
             notify()->info('Payment Already Piad.', 'Paid!');
             return redirect()->route('home.page');
         } else {
             notify()->error('Transaction is Invalid.', 'Invalid!');
-            return redirect()->route('checkout.page');
+            return redirect()->route('prices.page');
         }
 
     }
@@ -297,14 +297,14 @@ class SslCommerzPaymentController extends Controller
                 ->update(['status' => 'Canceled']);
 
             notify()->error('Transaction Canceled.', 'Canceled!');
-            return redirect()->route('checkout.page');
+            return redirect()->route('prices.page');
 
         } else if ($order_detials->status == 'Processing' || $order_detials->status == 'Complete') {
             notify()->info('Payment Already Piad.', 'Paid!');
             return redirect()->route('home.page');
         } else {
             notify()->error('Transaction is Invalid.', 'Invalid!');
-            return redirect()->route('checkout.page');
+            return redirect()->route('prices.page');
         }
 
 
@@ -350,7 +350,7 @@ class SslCommerzPaymentController extends Controller
                         ->update(['status' => 'Failed']);
 
                     notify()->error('Transaction Validation Failed.', 'Validation Error!');
-                    return redirect()->route('checkout.page');
+                    return redirect()->route('prices.page');
                 }
 
             } else if ($order_details->status == 'Processing' || $order_details->status == 'Complete') {
@@ -363,11 +363,11 @@ class SslCommerzPaymentController extends Controller
                 #That means something wrong happened. You can redirect customer to your product page.
 
                 notify()->error('Transaction Failed.', 'Failed!');
-                return redirect()->route('checkout.page');
+                return redirect()->route('prices.page');
             }
         } else {
             notify()->error('Invalid Data.', 'Invalid!');
-            return redirect()->route('checkout.page');
+            return redirect()->route('prices.page');
         }
     }
 

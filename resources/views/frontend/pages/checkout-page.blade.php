@@ -179,6 +179,11 @@
                                 <div class="mt-4 d-flex justify-content-center">
                                     <button type="submit" class="btn-main bg-btn3 lnk"><i class="fas fa-check mr-2"></i> Pay With SSL Commerz</button>
                                 </div>
+
+                                <div class="mt-4 d-flex justify-content-center">
+                                    <a target="_blank" href="https://www.sslcommerz.com/" title="SSLCommerz" alt="SSLCommerz"><img style="width:100%;height:auto;" src="https://securepay.sslcommerz.com/public/image/SSLCommerz-Pay-With-logo-All-Size-01.png" /></a>
+                                </div>
+
                             </div>
                         </div>
                     </div>

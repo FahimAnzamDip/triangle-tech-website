@@ -74,6 +74,13 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function () {
     Route::get('/packages/delete/{id}', 'PackagesController@delete')->name('packages.delete');
     Route::resource('packages', 'PackagesController')->except('show', 'destroy');
     //Orders
-    Route::get('/orders/processing', 'OrdersController@processing')->name('orders.processing');
+    Route::get('/orders/index', 'OrdersController@index')->name('orders.index');
+    Route::get('/orders/pending', 'OrdersController@pending')->name('orders.pending');
+    Route::get('/orders/failed', 'OrdersController@failed')->name('orders.failed');
+    Route::get('/orders/canceled', 'OrdersController@canceled')->name('orders.canceled');
+    Route::get('/orders/completed', 'OrdersController@completed')->name('orders.completed');
+    Route::get('/orders/show/{id}', 'OrdersController@show')->name('orders.show');
+    Route::get('/orders/complete/{id}', 'OrdersController@makeComplete')->name('orders.make.complete');
+    Route::get('/orders/delete/{id}', 'OrdersController@delete')->name('orders.delete');
 });
 

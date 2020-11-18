@@ -49,12 +49,12 @@
             <li class="menu-header">Development Prices</li>
             <li class="nav-item {{ request()->is('packages*') ? 'active' : '' }} border-bottom border-light border-top">
                 <a href="{{ route('packages.index') }}" class="nav-link">
-                    <i class="fas fa-box-open"></i><span>Packages</span>
+                    <i class="fas fa-shopping-bag"></i><span>Packages</span>
                 </a>
             </li>
-            <li class="nav-item {{ request()->is('#') ? 'active' : '' }} border-bottom border-light border-top">
-                <a href="{{ route('orders.processing') }}" class="nav-link">
-                    <i class="fas fa-gem"></i><span>Orders <div class="badge badge-primary">{{ \App\Models\Order::where('status', 'Processing')->count() }}</div></span>
+            <li class="nav-item {{ request()->is('orders*') ? 'active' : '' }} border-bottom border-light border-top">
+                <a href="{{ route('orders.index') }}" class="nav-link">
+                    <i class="fas fa-archive"></i><span>Orders <div class="badge badge-primary">{{ \App\Models\Order::where('status', 'Processing')->count() }}</div></span>
                 </a>
             </li>
 
