@@ -99,10 +99,12 @@
                 </div>
                 <hr>
                 <div class="text-md-right">
+                    @if($order->status != 'Complete')
                     <div class="float-lg-left mb-lg-0 mb-3">
                         <a href="{{ route('orders.make.complete', $order->id) }}" class="btn btn-primary text-white"><i class="fas fa-credit-card"></i> Complete Order</a>
                         <a id="delete" href="{{ route('orders.delete', $order->id) }}" class="btn btn-danger text-white"><i class="fas fa-times"></i> Delete</a>
                     </div>
+                    @endif
                     <button id="print" class="btn btn-warning btn-icon icon-left"><i class="fas fa-print"></i> Print</button>
                 </div>
             </div>
