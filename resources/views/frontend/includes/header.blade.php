@@ -23,6 +23,11 @@
                     <li class="{{ request()->is('contact') ? 'active' : '' }}">
                         <a href="{{ route('contact.page') }}" class="menu-links">Contact</a>
                     </li>
+                    @auth
+                        <li class="{{ request()->is('dashboard') ? 'active' : '' }}">
+                            <a href="{{ route('admin.dashboard') }}" class="menu-links text-danger">Dashboard</a>
+                        </li>
+                    @endauth
                 </ul>
             </div>
             <div class="mobile-menu2 mt-2">
@@ -54,6 +59,11 @@
                     <a href="{{ route('cart.page')  }}"><i class="fas fa-shopping-cart mr-2"></i> Cart <span class="badge badge-danger">{{ \Gloudemans\Shoppingcart\Facades\Cart::count() }}</span></a>
                 </li>
                 @endif
+                @auth
+                    <li class="{{ request()->is('dashboard') ? 'active' : '' }}">
+                        <a href="{{ route('admin.dashboard') }}" class="text-danger">Dashboard</a>
+                    </li>
+                @endauth
             </ul>
         </nav>
     </div>

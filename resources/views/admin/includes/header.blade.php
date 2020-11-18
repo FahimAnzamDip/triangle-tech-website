@@ -52,6 +52,11 @@
                     <i class="fas fa-box-open"></i><span>Packages</span>
                 </a>
             </li>
+            <li class="nav-item {{ request()->is('#') ? 'active' : '' }} border-bottom border-light border-top">
+                <a href="{{ route('orders.processing') }}" class="nav-link">
+                    <i class="fas fa-gem"></i><span>Orders <div class="badge badge-primary">{{ \App\Models\Order::where('status', 'Processing')->count() }}</div></span>
+                </a>
+            </li>
 
             <li class="menu-header">Services</li>
             <li class="nav-item {{ request()->is('services*') ? 'active' : '' }} border-bottom border-light border-top">

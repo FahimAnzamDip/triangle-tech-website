@@ -68,9 +68,11 @@
 {{--                    </div>--}}
 {{--                </div>--}}
 {{--            </div>--}}
-            <form action="">
+            <form action="{{ url('/pay') }}" method="POST">
+                @csrf
                 <div class="row">
                     <div class="col-lg-7">
+                        @include('admin.includes.alerts')
                         <h4 class="mb-4">Billing Address</h4>
                         <hr class="mb-4">
                         <div class="">
@@ -101,7 +103,7 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for=""><strong> Phone<span class="text-danger">*</span></strong></label>
-                                            <input type="text" class="form-control" name="phone" required placeholder="Enter your phone number" value="{{ old('phone') }}">
+                                            <input type="number" class="form-control" name="phone" required placeholder="Enter your phone number" value="{{ old('phone') }}">
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +129,7 @@
                                         <div class="form-group">
                                             <label for=""><strong> Postcode / ZIP<span
                                                         class="text-danger">*</span></strong></label>
-                                            <input type="text" class="form-control" name="zip_code" required placeholder="Enter your zip / postcode" value="{{ old('zip_code') }}">
+                                            <input type="number" class="form-control" name="zip_code" required placeholder="Enter your zip / postcode" value="{{ old('zip_code') }}">
                                         </div>
                                     </div>
                                 </div>
@@ -157,56 +159,25 @@
                                         @foreach(\Gloudemans\Shoppingcart\Facades\Cart::content() as $item)
                                         <tr style="border-bottom: 1px solid #dddddd !important;">
                                             <td>{{ $item->name }} × <strong>{{ $item->qty }}</strong></td>
-                                            <td>{{ $item->price * $item->qty }} BDT</td>
+                                            <td>৳ {{ $item->price * $item->qty }} BDT</td>
                                         </tr>
                                         @endforeach
 
                                         <tr class="text-danger font-weight-bold">
                                             <th style="padding-top: 25px;">Sub Total:</th>
-                                            <td style="padding-top: 25px;">{{ \Gloudemans\Shoppingcart\Facades\Cart::subtotal() }} BDT</td>
+                                            <td style="padding-top: 25px;">৳ {{ \Gloudemans\Shoppingcart\Facades\Cart::subtotal(0,'.',',') }} BDT</td>
                                         </tr>
                                         <tr class="text-danger font-weight-bold">
                                             <th>Total:</th>
-                                            <td>{{ \Gloudemans\Shoppingcart\Facades\Cart::total() }} BDT</td>
+                                            <td>৳ {{ \Gloudemans\Shoppingcart\Facades\Cart::total(0,'.',',') }} BDT</td>
                                         </tr>
                                     </table>
                                 </div>
                                 <hr class="my-0">
-                                <div class="mt-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="payment_method" id="bankTransfer"
-                                               value="Bank Transfer" checked style="cursor: pointer;">
-                                        <label class="form-check-label" for="bankTransfer" style="cursor: pointer;">
-                                            <strong>Direct Bank Transfer</strong>
-                                        </label>
-                                    </div>
-                                    <div class="card my-4" id="bankTransferForm" style="display: block;">
-                                        <div class="card-body">
-                                            <p style="font-size: 0.88rem;line-height: 24px">We will contact you as soon as possible and discuss further about the order and payment process.</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="form-check mt-4">
-                                        <input class="form-check-input" type="radio" name="payment_method" id="bkash"
-                                               value="Bkash" style="cursor: pointer;">
-                                        <label class="form-check-label" for="bkash" style="cursor: pointer;">
-                                            <strong>Bkash</strong>
-                                        </label>
-                                    </div>
-                                    @include('frontend.partials.bkash-form')
 
-                                    <div class="form-check mt-4">
-                                        <input class="form-check-input" type="radio" name="payment_method" id="rocket"
-                                               value="Rocket" style="cursor: pointer;">
-                                        <label class="form-check-label" for="rocket" style="cursor: pointer;">
-                                            <strong>Rocket</strong>
-                                        </label>
-                                    </div>
-                                    @include('frontend.partials.rocket-form')
-                                </div>
 
                                 <div class="mt-4 d-flex justify-content-center">
-                                    <button type="submit" class="btn-main bg-btn3 lnk">Place Order</button>
+                                    <button type="submit" class="btn-main bg-btn3 lnk"><i class="fas fa-check mr-2"></i> Pay With SSL Commerz</button>
                                 </div>
                             </div>
                         </div>
