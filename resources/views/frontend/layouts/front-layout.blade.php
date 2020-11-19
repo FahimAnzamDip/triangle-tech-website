@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 
-
 <head>
     <meta charset="utf-8"/>
     <title>{{ $title ?? config('app.name', 'Triangle Technologies Ltd') }}</title>
     <!-- META TAGS -->
     <meta name="description" content="Triangle Technologies Ltd is a well known software company in Bangladesh which is provide dynamic technological product to the clients before deadline.">
-    <meta name="keywords" content="Creative Agency, Marketing Agency, Web Development Agency">
+    <meta name="keywords" content="Graphics Design, Web Design, Web Development, ">
     <meta name="author" content="Saad">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +15,7 @@
     <!--  SHARE META TAGS -->
     <meta property="og:title" content="Triangle Technologies Ltd - Software Company">
     <meta property="og:description" content="Triangle Technologies Ltd is a well known software company in Bangladesh which is provide dynamic technological product to the clients before deadline.">
-    <meta property="og:image" content="{{ asset('frontend/images/link_image_new.jpg') }}">
+    <meta property="og:image" content="{{ asset('frontend/images/link_image.jpg') }}">
     <meta property="og:url" content="https://triangeltech.com">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:site_name" content="Triangle Technologies Ltd - Software Company">
