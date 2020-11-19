@@ -119,6 +119,26 @@
             }
         });
     });
+    $(document).on("click", "#cancel", function (e) {
+        e.preventDefault();
+        var link = $(this).attr("href");
+        Swal.fire({
+            icon: "warning",
+            title: "Are you sure?",
+            type: "warning",
+            showCancelButton: true,
+            buttonsStyling: false,
+            confirmButtonClass: "btn btn-danger btn-lg mr-3",
+            confirmButtonText: "Yes, Cancel Order!",
+            cancelButtonText: "Not Now",
+            cancelButtonClass: "btn btn-secondary btn-lg",
+            allowOutsideClick: false
+        }).then((willCancel) => {
+            if (willCancel.value) {
+                window.location.href = link;
+            }
+        });
+    });
 </script>
 @yield('backend-scripts')
 </body>

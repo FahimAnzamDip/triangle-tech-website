@@ -30,8 +30,8 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="d-flex justify-content-between align-items-center">
-                                <h1>Invoice</h1>
-                                <h1>Order #{{ $order->id }}</h1>
+                                <h1>Order Details: #{{ $order->id }}</h1>
+                                <h1>Transaction ID: #{{ $order->transaction_id }}</h1>
                             </div>
                             <hr>
                             <div class="row">
@@ -102,7 +102,7 @@
                     @if($order->status != 'Complete')
                     <div class="float-lg-left mb-lg-0 mb-3">
                         <a href="{{ route('orders.make.complete', $order->id) }}" class="btn btn-primary text-white"><i class="fas fa-credit-card"></i> Complete Order</a>
-                        <a id="delete" href="{{ route('orders.delete', $order->id) }}" class="btn btn-danger text-white"><i class="fas fa-times"></i> Delete</a>
+                        <a id="cancel" href="{{ route('orders.cancel', $order->id) }}" class="btn btn-danger text-white"><i class="fas fa-times"></i> Cancel</a>
                     </div>
                     @endif
                     <button id="print" class="btn btn-warning btn-icon icon-left"><i class="fas fa-print"></i> Print</button>

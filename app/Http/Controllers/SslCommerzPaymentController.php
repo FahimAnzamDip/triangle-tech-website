@@ -2,13 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\InvoiceMail;
 use App\Models\Order;
 use App\Models\OrderedPackage;
+use App\Models\User;
+use App\Notifications\InvoiceNotification;
+use App\Notifications\OrderReceivedNotification;
 use DB;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use App\Library\SslCommerz\SslCommerzNotification;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Notification;
 
 class SslCommerzPaymentController extends Controller
 {
@@ -117,6 +123,12 @@ class SslCommerzPaymentController extends Controller
                 'quantity' => $item->qty
             ]);
         }
+
+        $users = User::all();
+        Notification::send($users, new OrderReceivedNotification());
+
+        $email = $request->email;
+        Mail::to($email)->send(new InvoiceMail($update_product));
 
         $sslc = new SslCommerzNotification();
         # initiate(Transaction Data , false: Redirect to SSLCOMMERZ gateway/ true: Show all the Payement gateway here )
@@ -296,7 +308,7 @@ class SslCommerzPaymentController extends Controller
                 ->where('transaction_id', $tran_id)
                 ->update(['status' => 'Canceled']);
 
-            notify()->error('Transaction Canceled.', 'Canceled!');
+            notify()->error('Transaction Cancelled.', 'Cancelled!');
             return redirect()->route('prices.page');
 
         } else if ($order_detials->status == 'Processing' || $order_detials->status == 'Complete') {

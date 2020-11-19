@@ -99,12 +99,12 @@
                                         <tbody>
                                         <tr class="cart-subtotal">
                                             <th>Subtotal</th>
-                                            <td><span class="amount">{{ \Gloudemans\Shoppingcart\Facades\Cart::subtotal() }} BDT</span></td>
+                                            <td><span class="amount">{{ number_format(\Gloudemans\Shoppingcart\Facades\Cart::subtotal()) }} BDT</span></td>
                                         </tr>
                                         <tr class="order-total">
                                             <th>Total</th>
                                             <td>
-                                                <strong><span class="amount">{{ \Gloudemans\Shoppingcart\Facades\Cart::total() }} BDT</span></strong>
+                                                <strong><span class="amount">{{ number_format(\Gloudemans\Shoppingcart\Facades\Cart::total()) }} BDT</span></strong>
                                             </td>
                                         </tr>
                                         </tbody>

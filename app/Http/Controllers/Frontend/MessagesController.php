@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Message;
+use App\Models\User;
+use App\Notifications\ContactMessageNotification;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 
 class MessagesController extends Controller
 {
@@ -47,6 +50,9 @@ class MessagesController extends Controller
             'subject' => $request->subject,
             'message' => $request->message
         ]);
+
+        $users = User::all();
+        Notification::send($users, new ContactMessageNotification());
 
         notify()->success('Thank you. We will reach you soon.', 'Message Sent!');
 

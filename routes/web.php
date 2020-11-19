@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 
+//Route::get('/invoice', function () {
+//    $order = \App\Models\Order::find(8);
+//    return new App\Mail\InvoiceMail($order);
+//});
+
 // SSLCOMMERZ Start
 //Route::get('/example1', 'SslCommerzPaymentController@exampleEasyCheckout');
 //Route::get('/example2', 'SslCommerzPaymentController@exampleHostedCheckout');
@@ -82,5 +87,6 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function () {
     Route::get('/orders/show/{id}', 'OrdersController@show')->name('orders.show');
     Route::get('/orders/complete/{id}', 'OrdersController@makeComplete')->name('orders.make.complete');
     Route::get('/orders/delete/{id}', 'OrdersController@delete')->name('orders.delete');
+    Route::get('/orders/cancel/{id}', 'OrdersController@cancel')->name('orders.cancel');
 });
 

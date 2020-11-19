@@ -177,7 +177,7 @@
 
 
                                 <div class="mt-4 d-flex justify-content-center">
-                                    <button type="submit" class="btn-main bg-btn3 lnk"><i class="fas fa-check mr-2"></i> Pay With SSL Commerz</button>
+                                    <button type="submit" class="btn-main bg-btn3 lnk"><i class="fas fa-check mr-2"></i> Confirm Order</button>
                                 </div>
 
                                 <div class="mt-4 d-flex justify-content-center">
@@ -186,6 +186,8 @@
 
                             </div>
                         </div>
+
+                        @include('frontend.partials.manual-payment')
                     </div>
                 </div>
             </form>

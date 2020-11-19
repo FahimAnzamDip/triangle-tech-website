@@ -47,6 +47,6 @@ class CartsController extends Controller
 
         notify()->warning('Package Removed From Your Cart.', 'Removed!');
 
-        return redirect()->route('cart.page');
+        return redirect()->route('prices.page');
     }
 }

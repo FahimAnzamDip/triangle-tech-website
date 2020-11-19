@@ -75,7 +75,7 @@ class OrdersController extends Controller
 
         notify()->info('Order Status Updated.','Completed!');
 
-        return redirect()->route('orders.index');
+        return redirect()->back();
     }
 
     public function delete($id) {
@@ -83,6 +83,16 @@ class OrdersController extends Controller
 
         notify()->warning('Order Deleted.','Deleted!');
 
-        return redirect()->route('orders.index');
+        return redirect()->back();
+    }
+
+    public function cancel($id) {
+        Order::find($id)->update([
+            'status' => 'Canceled'
+        ]);
+
+        notify()->error('Order Canceled.','Canceled!');
+
+        return redirect()->back();
     }
 }
