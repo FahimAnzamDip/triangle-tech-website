@@ -91,5 +91,8 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function () {
     //Profile
     Route::get('/profile', 'ProfileController@profile')->name('profile');
     Route::post('/profile/update', 'ProfileController@update')->name('profile.update');
+    //Settngs
+    Route::get('/settings', 'SettingsController@index')->name('settings.index');
+    Route::post('/settings/update/{id}', 'SettingsController@update')->name('settings.update');
 });
 

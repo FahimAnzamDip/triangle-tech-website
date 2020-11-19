@@ -5,23 +5,23 @@
     <meta charset="utf-8"/>
     <title>{{ $title ?? config('app.name', 'Triangle Technologies Ltd') }}</title>
     <!-- META TAGS -->
-    <meta name="description" content="Triangle Technologies Ltd is a well known software company in Bangladesh which is provide dynamic technological product to the clients before deadline.">
-    <meta name="keywords" content="Graphics Design, Web Design, Web Development, ">
-    <meta name="author" content="Saad">
+    <meta name="description" content="{{ \App\Models\Setting::first()->meta_description }}">
+    <meta name="keywords" content="{{ \App\Models\Setting::first()->meta_keywords }}">
+    <meta name="author" content="Fahim Anzam Dip">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#c7ecff">
 
     <!--  SHARE META TAGS -->
-    <meta property="og:title" content="Triangle Technologies Ltd - Software Company">
-    <meta property="og:description" content="Triangle Technologies Ltd is a well known software company in Bangladesh which is provide dynamic technological product to the clients before deadline.">
+    <meta property="og:title" content="{{ \App\Models\Setting::first()->meta_title }}">
+    <meta property="og:description" content="{{ \App\Models\Setting::first()->meta_description }}">
     <meta property="og:image" content="{{ asset('frontend/images/link_image.jpg') }}">
     <meta property="og:image:type" content="image/jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://triangeltech.com">
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:site_name" content="Triangle Technologies Ltd - Software Company">
+    <meta property="og:site_name" content="{{ \App\Models\Setting::first()->meta_title }}">
     <meta name="twitter:image:alt" content="Triangle Technologies Ltd">
 
     <!--website-favicon-->

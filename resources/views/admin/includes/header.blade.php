@@ -119,6 +119,13 @@
                     <i class="fas fa-envelope"></i><span>Messages <div class="badge badge-primary">{{ \App\Models\Message::where('read', 0)->count() }}</div></span>
                 </a>
             </li>
+
+            <li class="menu-header">Settings</li>
+            <li class="nav-item {{ request()->is('settings*') ? 'active' : '' }} border-bottom border-light border-top">
+                <a href="{{ route('settings.index') }}" class="nav-link">
+                    <i class="fas fa-cogs"></i><span>Site Settings</span>
+                </a>
+            </li>
         </ul>
 
     </aside>
