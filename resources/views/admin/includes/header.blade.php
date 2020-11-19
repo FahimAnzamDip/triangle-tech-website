@@ -15,7 +15,7 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right">
 
-                <a href="#" class="dropdown-item has-icon">
+                <a href="{{ route('profile') }}" class="dropdown-item has-icon">
                     <i class="fas fa-cog"></i> Account Settings
                 </a>
 

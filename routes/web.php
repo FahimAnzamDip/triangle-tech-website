@@ -88,5 +88,8 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function () {
     Route::get('/orders/complete/{id}', 'OrdersController@makeComplete')->name('orders.make.complete');
     Route::get('/orders/delete/{id}', 'OrdersController@delete')->name('orders.delete');
     Route::get('/orders/cancel/{id}', 'OrdersController@cancel')->name('orders.cancel');
+    //Profile
+    Route::get('/profile', 'ProfileController@profile')->name('profile');
+    Route::post('/profile/update', 'ProfileController@update')->name('profile.update');
 });
 

@@ -43,7 +43,7 @@
                         <div class="inner-table">
                             <span class="title">{{ $package->package_title }}</span>
                             <p class="title-sub">{{ $package->package_sub_title }}</p>
-                            <h2><sup>BDT</sup> {{ $package->package_price }}</h2>
+                            <h2><sup>৳</sup> {{ number_format($package->package_price) }}</h2>
                             <div class="details">
                                 <ul>
                                     <li><strong>Free Domain:</strong> {{ $package->package_domains }}</li>

@@ -5,12 +5,23 @@
 <head>
     <meta charset="utf-8"/>
     <title>{{ $title ?? config('app.name', 'Triangle Technologies Ltd') }}</title>
-    <meta name="description" content="Creative Agency, Marketing Agency Template">
+    <!-- META TAGS -->
+    <meta name="description" content="Triangle Technologies Ltd is a well known software company in Bangladesh which is provide dynamic technological product to the clients before deadline.">
     <meta name="keywords" content="Creative Agency, Marketing Agency, Web Development Agency">
-    <meta name="author" content="fahim-anzam">
+    <meta name="author" content="Saad">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#c7ecff">
+
+    <!--  SHARE META TAGS -->
+    <meta property="og:title" content="Triangle Technologies Ltd - Software Company">
+    <meta property="og:description" content="Triangle Technologies Ltd is a well known software company in Bangladesh which is provide dynamic technological product to the clients before deadline.">
+    <meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg">
+    <meta property="og:url" content="http://euro-travel-example.com/index.htm">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="Triangle Technologies Ltd - Software Company">
+    <meta name="twitter:image:alt" content="Triangle Technologies Ltd">
+
     <!--website-favicon-->
     <link href="{{ asset('frontend') }}/images/favicon.png" rel="icon">
     <!--plugin-css-->
