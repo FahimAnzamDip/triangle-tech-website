@@ -16,7 +16,7 @@
     <!--  SHARE META TAGS -->
     <meta property="og:title" content="Triangle Technologies Ltd - Software Company">
     <meta property="og:description" content="Triangle Technologies Ltd is a well known software company in Bangladesh which is provide dynamic technological product to the clients before deadline.">
-    <meta property="og:image" content="{{ asset('frontend/images/link_image.jpg') }}">
+    <meta property="og:image" content="{{ asset('frontend/images/link_image_new.jpg') }}">
     <meta property="og:url" content="https://triangeltech.com">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:site_name" content="Triangle Technologies Ltd - Software Company">
