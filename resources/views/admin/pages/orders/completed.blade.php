@@ -12,7 +12,7 @@
 
         <div class="section-body">
             <div class="row mb-4">
-                <div class="col-md-12 d-flex justify-content-end">
+                <div class="col-md-12 d-flex justify-content-end flex-wrap">
                     <a href="{{ route('orders.pending') }}" class="btn btn-info mr-3"><div class="badge badge-white">{{ \App\Models\Order::where('status', 'Pending')->count() }}</div> Pending</a>
 
                     <a href="{{ route('orders.index') }}" class="btn btn-primary mr-3"><div class="badge badge-white">{{ \App\Models\Order::where('status', 'Processing')->count() }}</div> Processing</a>

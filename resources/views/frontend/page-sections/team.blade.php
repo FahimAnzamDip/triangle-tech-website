@@ -18,8 +18,8 @@
                         <ul class="d-flex list-unstyled my-3 team-social">
                             <li class="list-item mr-3"><a href="mailto:{{ $member->member_email }}"><i class="fas fa-envelope"></i></a>
                             </li>
-                            <li class="list-item mr-3"><a href="{{ $member->member_linkedin }}"><i class="fab fa-linkedin"></i></a></li>
-                            <li class="list-item"><a href="{{ $member->member_facebook }}"><i class="fab fa-facebook-square"></i></a></li>
+                            <li class="list-item mr-3"><a href="{{ $member->member_linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                            <li class="list-item"><a href="{{ $member->member_facebook }}" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
                         </ul>
                         <h4 class="mb-0">{{ $member->member_name }}</h4>
                         <p class="text-left">{{ $member->member_designation }}</p>
