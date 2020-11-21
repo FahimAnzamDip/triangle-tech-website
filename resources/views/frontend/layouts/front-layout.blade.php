@@ -101,8 +101,10 @@
 <!-- Your Chat Plugin code -->
 <div class="fb-customerchat"
      attribution=setup_tool
-     page_id="485065115167218"
-     theme_color="#0A7CFF">
+     page_id="116091306463317"
+     theme_color="#ff7e29"
+     logged_in_greeting="Hlw Greetings from Triangle Technologies Ltd. How Can we help you today?"
+     logged_out_greeting="Hlw Greetings from Triangle Technologies Ltd. How Can we help you today?">
 </div>
 <!-- js placed at the end of the document so the pages load faster -->
 <script src="{{ asset('frontend') }}/js/vendor/modernizr-3.5.0.min.js"></script>
