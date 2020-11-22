@@ -36,6 +36,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/contact', 'PagesController@contact')->name('contact.page');
     Route::get('/cart', 'PagesController@cart')->name('cart.page');
     Route::get('/checkout', 'PagesController@checkout')->name('checkout.page');
+    Route::get('/portfolio', 'PagesController@portfolio')->name('portfolio.page');
     //Contact Messages
     Route::get('/messages/delete/{id}', 'MessagesController@delete')->name('messages.delete');
     Route::resource('messages', 'MessagesController')->except('edit', 'update', 'destroy', 'create');

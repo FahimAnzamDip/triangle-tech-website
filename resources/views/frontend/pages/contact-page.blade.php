@@ -10,8 +10,8 @@
                         <div class="bread-inner mt-4">
                             <div class="bread-menu wow fadeInUp" data-wow-delay=".2s">
                                 <ul>
-                                    <li><a href="index-2.html">Home</a></li>
-                                    <li><a href="#"><strong>Contact</strong></a></li>
+                                    <li><a href="{{ route('home.page') }}">Home</a></li>
+                                    <li><strong>Contact</strong></li>
                                 </ul>
                             </div>
                             <div class="bread-title wow fadeInUp" data-wow-delay=".5s">

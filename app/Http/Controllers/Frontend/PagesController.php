@@ -24,7 +24,7 @@ class PagesController extends Controller
         $members = Member::all();
         $clients = Client::latest()->get();
         $categories = Category::all();
-        $projects = Project::all();
+        $projects = Project::take(9)->get();
 
         return view('frontend.home-page', [
             'title' => $title,
@@ -69,6 +69,18 @@ class PagesController extends Controller
         return view('frontend.pages.prices-page', [
             'title' => $title,
             'packages' => $packages
+        ]);
+    }
+
+    public function portfolio() {
+        $title = "Triangle Technologies Ltd - Projects";
+        $catetories = Category::all();
+        $projects = Project::all();
+
+        return view('frontend.pages.projects-page', [
+            'title' => $title,
+            'projects' => $projects,
+            'categories' => $catetories
         ]);
     }
 

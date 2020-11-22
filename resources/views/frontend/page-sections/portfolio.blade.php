@@ -35,6 +35,9 @@
             </div>
             @endforeach
         </div>
+        <div class="row justify-content-center">
+            <a href="{{ route('portfolio.page')  }}" class="btn-main bg-btn3 lnk" target="_blank">View All Projects <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+        </div>
     </div>
 </section>
 <!--End Portfolio-->
