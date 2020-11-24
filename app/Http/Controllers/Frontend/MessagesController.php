@@ -52,7 +52,7 @@ class MessagesController extends Controller
         ]);
 
         $users = User::all();
-        Notification::send($users, new ContactMessageNotification());
+        Notification::send($users, new ContactMessageNotification($message));
 
         notify()->success('Thank you. We will reach you soon.', 'Message Sent!');
 

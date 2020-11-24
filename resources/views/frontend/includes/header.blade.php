@@ -17,7 +17,7 @@
                     <li class="{{ request()->is('all-services') ? 'active' : '' }}">
                         <a href="{{ route('all.services.page') }}" class="menu-links">Services</a>
                     </li>
-                    <li class="{{ request()->is('prices') ? 'active' : '' }}">
+                    <li class="{{ request()->is('web-development-prices-in-bangladesh') ? 'active' : '' }}">
                         <a href="{{ route('prices.page') }}" class="menu-links">Development Prices</a>
                     </li>
                     <li class="{{ request()->is('contact') ? 'active' : '' }}">
@@ -48,7 +48,7 @@
                 <li class="{{ request()->is('all-services') ? 'active' : '' }}">
                     <a href="{{ route('all.services.page') }}">Services</a>
                 </li>
-                <li class="{{ request()->is('prices') ? 'active' : '' }}">
+                <li class="{{ request()->is('web-development-prices-in-bangladesh') ? 'active' : '' }}">
                     <a href="{{ route('prices.page') }}">Development Prices</a>
                 </li>
                 <li class="{{ request()->is('contact') ? 'active' : '' }}">

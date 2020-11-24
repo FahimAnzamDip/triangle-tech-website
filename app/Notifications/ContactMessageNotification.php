@@ -11,14 +11,15 @@ class ContactMessageNotification extends Notification
 {
     use Queueable;
 
+    public $contactMessage;
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($contactMessage)
     {
-        //
+        $this->contactMessage = $contactMessage;
     }
 
     /**
@@ -41,10 +42,14 @@ class ContactMessageNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->subject('Contact Message Received')
-                    ->line('Someone sent a message in your website.')
-                    ->action('Visit Messages', url('/messages'))
-                    ->line('Thank you! Have a nice day.');
+                    ->greeting('Hi Saad!')
+                    ->subject('TTL - Contact Message Received')
+                    ->line($this->contactMessage->name . " sent a message in your website.")
+                    ->line("Email: " . $this->contactMessage->email)
+                    ->line("Message: " . $this->contactMessage->message)
+                    ->action('View Messages', url('/messages'))
+                    ->line('Thank you! Have a nice day.')
+                    ->replyTo($this->contactMessage->email);
     }
 
     /**

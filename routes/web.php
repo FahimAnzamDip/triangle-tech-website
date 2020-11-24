@@ -32,7 +32,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/', 'PagesController@home')->name('home.page');
     Route::get('/about', 'PagesController@about')->name('about.page');
     Route::get('/all-services', 'PagesController@services')->name('all.services.page');
-    Route::get('/prices', 'PagesController@prices')->name('prices.page');
+    Route::get('/web-development-prices-in-bangladesh', 'PagesController@prices')->name('prices.page');
     Route::get('/contact', 'PagesController@contact')->name('contact.page');
     Route::get('/cart', 'PagesController@cart')->name('cart.page');
     Route::get('/checkout', 'PagesController@checkout')->name('checkout.page');
