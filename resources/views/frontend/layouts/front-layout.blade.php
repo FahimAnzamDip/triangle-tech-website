@@ -15,7 +15,7 @@
     <!--  SHARE META TAGS -->
     <meta property="og:title" content="{{ \App\Models\Setting::first()->meta_title }}">
     <meta property="og:description" content="{{ \App\Models\Setting::first()->meta_description }}">
-    <meta property="og:image" content="{{ asset('frontend/images/link_image.jpg') }}">
+    <meta property="og:image" content="{{ asset('frontend/images/og_image.jpg') }}">
     <meta property="og:image:type" content="image/jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
