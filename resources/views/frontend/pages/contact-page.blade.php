@@ -97,7 +97,7 @@
     </section>
     <!--End Enquire Form-->
     <!--Google Map-->
-    <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="400px" id="gmap_canvas" src="https://maps.google.com/maps?q=Triangle%20Technologies&t=&z=18&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:400px;width:auto;}.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:auto;}</style></div>
+    <div class="mapouter"><div class="gmap_canvas"><iframe title="Triangle Technologies Ltd Map Location" width="100%" height="400px" id="gmap_canvas" src="https://maps.google.com/maps?q=Triangle%20Technologies&t=&z=18&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:400px;width:auto;}.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:auto;}</style></div>
     <!--Google Map-->
     <!--CTA-->
     @include('frontend.page-sections.cta')

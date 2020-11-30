@@ -12,7 +12,7 @@
             </div>
 
             <div class="col-lg-3 col-sm-6">
-                <h5 class="mb30 mt30">Contact Us</h5>
+                <h2 style="font-size: 20px;line-height: 30px;" class="mb30 mt30">Contact Us</h2>
                 <ul class="footer-address-list ftr-details">
                     <li>
                         <span><i class="fas fa-envelope"></i></span>
@@ -31,7 +31,7 @@
                 </ul>
             </div>
             <div class="col-lg-2 col-sm-6">
-                <h5 class="mb30 mt30">Important Links</h5>
+                <h2 style="font-size: 20px;line-height: 30px;" class="mb30 mt30">Important Links</h2>
                 <ul class="footer-address-list link-hover">
                     <li><a href="{{ route('home.page') }}">Home</a></li>
                     <li><a href="{{ route('about.page') }}">About</a></li>
@@ -41,7 +41,7 @@
                 </ul>
             </div>
             <div class="col-lg-2 col-sm-6">
-                <h5 class="mb30 mt30">Useful Links</h5>
+                <h2 style="font-size: 20px;line-height: 30px;" class="mb30 mt30">Useful Links</h2>
                 <ul class="footer-address-list link-hover">
                     <li><a href="{{ route('home.page') }}">Projects</a></li>
                     <li><a href="{{ route('home.page') }}">Our Team</a></li>

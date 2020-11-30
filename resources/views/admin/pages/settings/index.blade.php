@@ -32,7 +32,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Meta Image<span class="text-danger">*</span></label>
-                                            <img width="178" src="{{ asset('storage/important') . '/' . 'link_image.jpg'}}" alt="Meta Image" class="mb-3 mt-1">
+                                            <img width="178" src="{{ asset('storage/important') . '/' . 'og_image.jpg'}}" alt="Meta Image" class="mb-3 mt-1">
                                             <input type="file" class="form-control" name="meta_image">
                                         </div>
                                     </div>

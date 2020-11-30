@@ -75,7 +75,7 @@
 <x:notify-messages />
 
 <!--scroll to top-->
-<a id="scrollUp" href="#top"></a>
+<a id="scrollUp" href="#top" tabindex="-1"></a>
 
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
