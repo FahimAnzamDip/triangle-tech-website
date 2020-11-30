@@ -28,11 +28,11 @@
     <link href="{{ asset('frontend') }}/images/favicon.png" rel="icon">
     <!--plugin-css-->
     <link href="{{ asset('frontend') }}/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ asset('frontend') }}/css/plugin.min.css" rel="stylesheet">
-    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <link href="{{ asset('frontend') }}/css/plugin.min.css" rel="stylesheet" async>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" async>
     <link
         href="//fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap"
-        rel="stylesheet">
+        rel="preconnect">
     <!-- template-style-->
     @notifyCss
     <link href="{{ asset('frontend') }}/css/style.min.css" rel="stylesheet">
