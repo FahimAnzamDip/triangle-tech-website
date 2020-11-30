@@ -2,7 +2,7 @@
 
 @section('page-content')
     <!--Breadcrumb Area-->
-    <section class="breadcrumb-area bg-gradeint4">
+    <section class="breadcrumb-area bg-personal">
         <div class="text-block">
             <div class="container">
                 <div class="row">
