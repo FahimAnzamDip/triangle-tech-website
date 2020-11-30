@@ -51,7 +51,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 mt40 single-card-item {{ strtolower(str_replace(' ', '_', $project->category->category_name) ) }}">
                         <div class="isotope_item up-hor">
                             <div class="item-image">
-                                <a href="{{ $project->project_link }}"><img src="{{ asset('storage/project_images') . '/' . $project->project_image }}" alt="image" class="img-fluid" /></a>
+                                <a href="{{ $project->project_link }}"><img src="{{ asset('frontend/images/portfolio_placeholder.jpg') }}" data-src="{{ asset('storage/project_images') . '/' . $project->project_image }}" alt="image" class="img-fluid lazy" /></a>
                             </div>
                             <div class="item-info-div shdo">
                                 <h4><a href="{{ $project->project_link }}">{{ $project->project_name }}</a></h4>

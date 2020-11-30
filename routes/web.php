@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 
+Route::get('/link', function () {
+   symlink('', '');
+   notify()->success('Delete The Route.', 'Linked!');
+   return back();
+});
+
 //Route::get('/invoice', function () {
 //    $order = \App\Models\Order::find(8);
 //    return new App\Mail\InvoiceMail($order);

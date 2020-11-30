@@ -13,7 +13,7 @@
             @forelse($members as $member)
             <div class="col-lg-3 col-sm-6">
                 <div class="full-image-card hover-scale">
-                    <div class="image-div"><img data-src="{{ asset('storage/member_images') . '/' . $member->member_image }}" alt="team" class="img-fluid lazy" /></div>
+                    <div class="image-div"><img src="{{ asset('frontend/images/member_placeholder.jpg') }}" data-src="{{ asset('storage/member_images') . '/' . $member->member_image }}" alt="team" class="img-fluid lazy" /></div>
                     <div class="info-text-block">
                         <ul class="d-flex list-unstyled my-3 team-social">
                             <li class="list-item mr-3"><a href="mailto:{{ $member->member_email }}"><i class="fas fa-envelope"></i></a>
