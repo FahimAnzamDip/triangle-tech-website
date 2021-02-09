@@ -151,6 +151,13 @@ class ProjectsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function delete($id) {
-        //
+        $project = Project::findOrFail($id);
+
+        Storage::delete('public/project_images/' . $project->project_image);
+        $project->delete();
+
+        notify()->warning('Project Deleted.', 'Deleted!');
+
+        return redirect()->route('projects.index');
     }
 }

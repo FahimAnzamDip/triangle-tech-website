@@ -13,8 +13,7 @@
         <div class="section-body">
             <div class="row mb-3">
                 <div class="col-md-12 d-flex justify-content-end">
-                    <button data-target="#createModal" data-toggle="modal" class="btn btn-primary"><i
-                            class="fas fa-plus-circle"></i> Create Category
+                    <button data-target="#createModal" data-toggle="modal" class="btn btn-primary"><i class="fas fa-plus-circle"></i> Create Category
                     </button>
                 </div>
             </div>

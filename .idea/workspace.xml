@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe01bec1-4289-4ca1-9204-40fa2950c3e8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page-sections/ceo-says.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page-sections/ceo-says.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page-sections/portfolio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page-sections/portfolio.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page-sections/team.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page-sections/team.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/pages/projects-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/pages/projects-page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="fe01bec1-4289-4ca1-9204-40fa2950c3e8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -281,7 +274,7 @@
       <workItem from="1606727850607" duration="2125000" />
       <workItem from="1606736175814" duration="11000" />
       <workItem from="1606741072305" duration="11886000" />
-      <workItem from="1606755671704" duration="1121000" />
+      <workItem from="1606755671704" duration="1351000" />
     </task>
     <servers />
   </component>
